@@ -5,9 +5,10 @@ import NavBar from './NavBar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <NavBar />
       <Greeding />
+      <HelloWorld />
       <Footer />
     </div>
   );
