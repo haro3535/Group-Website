@@ -9,10 +9,7 @@
   font-family: Arial, sans-serif;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
+
 
 .footer-content {
   display: flex;
@@ -106,4 +103,9 @@
 .social-icon:hover {
   background-color: #bbb;
   color: #fff;
+}
+
+/* Define the open state */
+.open {
+  max-height: 30vh; /* Adjust the value as needed */
 }

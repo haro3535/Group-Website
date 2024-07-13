@@ -3,8 +3,8 @@
 
 export default function Footer(){
     return(
-        <footer className="footer">
-          <div className="container">
+        <footer className="footer ">
+          <div className="mx-40 w-3/4">
             <div className="footer-content">
               <div className="footer-section">
                 <a href="/" className="logo">

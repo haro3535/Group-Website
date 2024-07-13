@@ -1,7 +1,7 @@
 import Footer from './Footer';
 import Greeding from './Greeding';
 import HelloWorld from './HelloWorld';
-import NavBar from './NavBar';
+import NavBar from './NavBar/NavBar';
 
 function App() {
   return (
