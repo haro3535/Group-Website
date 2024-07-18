@@ -5,7 +5,7 @@ export default function NavBar(){
     return(
         <>
             <nav id='navbar' className="bg-white w-full h-auto fixed  justify-center 
-            items-center border-b-[1px] border-gray-300">
+            items-center border-b-[1px] border-gray-300 z-10" >
                 <div className='w-full flex justify-center items-center'>
                     <div id='nav-element' className="h-[12vh] w-3/4 flex justify-between items-center transition-[height] duration-[0.4s] ease-in-out">
                         <a href='/'>

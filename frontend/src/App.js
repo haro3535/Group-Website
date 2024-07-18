@@ -2,6 +2,9 @@ import Footer from './Footer';
 import Greeding from './Greeding';
 import HelloWorld from './HelloWorld';
 import NavBar from './NavBar/NavBar';
+import Services from './Services/Services';
+import Cards from './Cards/Cards';
+
 
 function App() {
   return (
@@ -9,7 +12,10 @@ function App() {
       <NavBar />
       <Greeding />
       <HelloWorld />
+      <Services />
+      <Cards />
       <Footer />
+      
     </div>
   );
 }
