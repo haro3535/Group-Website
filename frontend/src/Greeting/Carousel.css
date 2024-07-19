@@ -1,0 +1,131 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 80vh;
+}
+
+.carousel .slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel .slide.active {
+    display: block;
+}
+
+.carousel .slide.previous {
+    display: block;
+}
+
+.carousel .slide.right.active {
+    animation: slide-in-right 0.5s ease-in-out;
+}
+
+.carousel .slide.right.previous {
+    animation: slide-out-left 0.5s ease-in-out;
+}
+
+.carousel .slide.left.active {
+    animation: slide-in-left 0.5s ease-in-out;
+}
+
+.carousel .slide.left.previous {
+    animation: slide-out-right 0.5s ease-in-out;
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out-right {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.arrow {
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    width: 70px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    transition: opacity 0.5s;
+    padding: 10px;
+    z-index: 1;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: white;
+}
+
+.indicator:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

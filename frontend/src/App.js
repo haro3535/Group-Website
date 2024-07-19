@@ -1,5 +1,5 @@
 import Footer from './Footer';
-import Greeding from './Greeding';
+import Greeting from './Greeting/Greeting';
 import HelloWorld from './HelloWorld';
 import NavBar from './NavBar/NavBar';
 import Services from './Services/Services';
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="">
       <NavBar />
-      <Greeding />
+      <Greeting />
       <HelloWorld />
       <Services />
       <Cards />
