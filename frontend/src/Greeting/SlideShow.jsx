@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
+
+
+
 import './Carousel.css';
 import slidesData from './resources/carouselData.json';
 
 const SlideShow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(null);
-  const [direction, setDirection] = useState('right'); // New state for direction
+  const [direction, setDirection] = useState('right');
 
   const prevSlide = () => {
     const newIndex = currentIndex === 0 ? slidesData.slides.length - 1 : currentIndex - 1;
@@ -40,7 +42,12 @@ const SlideShow = () => {
 
   return (
     <div className='carousel'>
-      <BsArrowLeftCircleFill className='arrow arrow-left' onClick={prevSlide} />
+      
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" onClick={prevSlide} className="size-6 arrow arrow-left">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+      </svg>
+      
       {slidesData.slides.map((item, idx) => (
         <img
           src={item.src}
@@ -49,7 +56,17 @@ const SlideShow = () => {
           className={`slide ${currentIndex === idx ? 'active' : prevIndex === idx ? 'previous' : ''} ${direction}`}
         />
       ))}
-      <BsArrowRightCircleFill className='arrow arrow-right' onClick={nextSlide} />
+
+        
+
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 arrow arrow-right" onClick = {nextSlide}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"  />
+      </svg>
+
+        
+
+      
+      
       <span className='indicators'>
         {slidesData.slides.map((_, idx) => (
           <button

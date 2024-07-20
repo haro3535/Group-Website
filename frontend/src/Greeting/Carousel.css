@@ -13,7 +13,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 550ms ease-in-out;
 }
 
 .carousel .slide.active {
@@ -25,19 +25,21 @@
 }
 
 .carousel .slide.right.active {
-    animation: slide-in-right 0.5s ease-in-out;
+    animation: slide-in-right 550ms ease-in-out;
 }
 
 .carousel .slide.right.previous {
-    animation: slide-out-left 0.5s ease-in-out;
+    animation: slide-out-left 550ms ease-in-out;
+    
 }
 
 .carousel .slide.left.active {
-    animation: slide-in-left 0.5s ease-in-out;
+    animation: slide-in-left 550ms ease-in-out;
 }
 
 .carousel .slide.left.previous {
-    animation: slide-out-right 0.5s ease-in-out;
+    animation: slide-out-right 550ms ease-in-out;
+    
 }
 
 @keyframes slide-in-right {
@@ -76,31 +78,55 @@
     }
 }
 
+
+
 .arrow {
+    
+    
     position: absolute;
     bottom: 50%;
     top: 50%;
     transform: translateY(-50%);
-    color: white;
+    color: rgb(255 180 0);
     width: 70px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
     opacity: 0.9;
-    transition: opacity 0.5s;
+    
     padding: 10px;
     z-index: 1;
+    transition: 400ms ease;
 }
 
-.arrow:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+.arrow:hover{
+    width: 80px;
 }
+
+
+
+
+.arrow:hover.arrow-left {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    
+}
+
+.arrow:hover.arrow-right{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+}
+
+
 
 .arrow-left {
     left: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 }
 
 .arrow-right {
     right: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    
 }
 
 .indicators {
@@ -123,7 +149,7 @@
 }
 
 .indicator.active {
-    background-color: white;
+    background-color: rgb(255 180 0);
 }
 
 .indicator:hover {
