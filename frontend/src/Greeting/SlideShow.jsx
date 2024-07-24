@@ -40,6 +40,12 @@ const SlideShow = () => {
     }
   }, [currentIndex, prevIndex]);
 
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+       nextSlide()
+    }, 5000);
+    return () => clearInterval(slideInterval);
+  }, [currentIndex, nextSlide]);
   return (
     <div className='carousel'>
       

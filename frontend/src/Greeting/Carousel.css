@@ -84,6 +84,7 @@
 
 
 
+
 .arrow {
     
     
@@ -91,49 +92,56 @@
     bottom: 50%;
     top: 50%;
     transform: translateY(-50%);
-    color:var(--blue-second);
+    color:var(--blue-first);
     width: 70px;
     height: 100%;
     
     
-    border-radius: 10px;
+    
     opacity: 0.9;
     
     padding: 10px;
     z-index: 1;
-    transition: 400ms ease;
+    transition: 300ms ease-in-out;
+    
 }
 
 .arrow:hover{
     width: 80px;
-    transition: 400ms ease;
+    
+}
+
+.arrow:active{
+    width: 68px;
 }
 
 
 
 
 .arrow:hover.arrow-left {
-    background: linear-gradient(to left, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.9));
-    transition: 400ms ease;
+    background: linear-gradient(to left, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.6));
+    
     
 }
 
 .arrow:hover.arrow-right{
-    background: linear-gradient(to right, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.9));
-    transition: 400ms ease;
+    background: linear-gradient(to right, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.6));
+    
 }
 
 
 
 .arrow-left {
     left: 0;
-    background: linear-gradient(to left, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.7));
+    background: linear-gradient(to left, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.4));
+    
 }
 
 
 .arrow-right {
     right: 0;
-    background: linear-gradient(to right, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.7));
+    background: linear-gradient(to right, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.4));
+    
     
 }
 
@@ -149,17 +157,17 @@
     width: 10px;
     height: 10px;
     margin: 0 5px;
-    background-color: rgba(var(--blue-second-rgba), 0.5);
+    
     border: none;
     border-radius: 50%;
+    
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border: 2px solid rgba(var(--blue-first-rgba), 0.5);
 }
 
 .indicator.active {
     background-color: var(--blue-first);
 }
 
-.indicator:hover {
-    background-color: var(--blue-third);
-}
+
