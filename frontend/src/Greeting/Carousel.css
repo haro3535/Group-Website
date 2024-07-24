@@ -1,3 +1,5 @@
+
+
 .carousel {
     position: relative;
     width: 100%;
@@ -89,10 +91,11 @@
     bottom: 50%;
     top: 50%;
     transform: translateY(-50%);
-    color: rgb(255 180 0);
+    color:var(--blue-second);
     width: 70px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    
+    
     border-radius: 10px;
     opacity: 0.9;
     
@@ -110,13 +113,13 @@
 
 
 .arrow:hover.arrow-left {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(to left, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.9));
     transition: 400ms ease;
     
 }
 
 .arrow:hover.arrow-right{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(to right, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.9));
     transition: 400ms ease;
 }
 
@@ -124,12 +127,13 @@
 
 .arrow-left {
     left: 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(to left, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.7));
 }
+
 
 .arrow-right {
     right: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(to right, rgba(var(--blue-fourth-rgba), 0), rgba(var(--blue-fourth-rgba), 0.7));
     
 }
 
@@ -145,7 +149,7 @@
     width: 10px;
     height: 10px;
     margin: 0 5px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(var(--blue-second-rgba), 0.5);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -153,9 +157,9 @@
 }
 
 .indicator.active {
-    background-color: rgb(255 180 0);
+    background-color: var(--blue-first);
 }
 
 .indicator:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--blue-third);
 }
