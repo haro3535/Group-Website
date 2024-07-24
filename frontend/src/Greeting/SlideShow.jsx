@@ -71,7 +71,7 @@ const SlideShow = () => {
         {slidesData.slides.map((_, idx) => (
           <button
             key={idx}
-            onClick={() => goToSlide(idx)}
+            onClick={currentIndex === idx ? null :() => goToSlide(idx)}
             className={`indicator ${currentIndex === idx ? 'active' : ''}`}
           ></button>
         ))}
