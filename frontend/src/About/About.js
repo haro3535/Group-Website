@@ -25,15 +25,15 @@ export default function About() {
             </div>
             <div className="image-container">
                 <div className="image-box">
-                    <img src="https://cdn-icons-png.freepik.com/256/9158/9158121.png?ga=GA1.1.982740956.1721117972&semt=ais_hybrid" alt="Ekiple Tanışın" />
+                    <img src="https://cdn-icons-png.flaticon.com/128/17017/17017788.png" alt="Ekiple Tanışın" />
                     <p>Ekiple Tanışın</p>
                 </div>
                 <div className="image-box">
-                    <img src="https://cdn-icons-png.freepik.com/256/901/901049.png?ga=GA1.1.982740956.1721117972&semt=ais_hybrid" alt="Çalışmalarımızı Görüntüleyin" />
+                    <img src="https://cdn-icons-png.flaticon.com/128/10242/10242221.png" alt="Çalışmalarımızı Görüntüleyin" />
                     <p>Çalışmalarımızı Görüntüleyin</p>
                 </div>
                 <div className="image-box">
-                    <img src="https://cdn-icons-png.freepik.com/256/7913/7913444.png?ga=GA1.1.982740956.1721117972&semt=ais_hybrid" alt="İletişime Geçin" />
+                    <img src="https://cdn-icons-png.flaticon.com/128/17399/17399740.png" alt="İletişime Geçin" />
                     <p>İletişime Geçin</p>
                 </div>
             </div>

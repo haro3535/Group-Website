@@ -8,9 +8,9 @@ const teamMembers = [
         imgSrc: 'https://media.licdn.com/dms/image/D4D35AQGV-gm6h_cw_A/profile-framedphoto-shrink_100_100/0/1703076731153?e=1722290400&v=beta&t=M92cq6KIakZ1T53TEUYagvp-XiptAi3mNHUFLwIfzKU',
         links: [
             'https://x.com/serotonin_q',
-            'https://x.com/serotonin_q',
-            'https://x.com/serotonin_q',
-            'https://x.com/serotonin_q'
+            'https://www.instagram.com/harunonr_/',
+            'https://www.linkedin.com/in/harunonur/',
+            'https://github.com/haro3535'
         ]
     },
     {
@@ -18,10 +18,10 @@ const teamMembers = [
         title: 'Creative Director',
         imgSrc: 'https://media.licdn.com/dms/image/D4D03AQGCEbn41KC0NA/profile-displayphoto-shrink_400_400/0/1709741267369?e=1727308800&v=beta&t=rdt10ELN8JZ7a2cND_OuZ0K0xOeDVnIJfmz6Ft2EAmA',
         links: [
-            'https://x.com/serotonin_q',
-            'https://x.com/serotonin_q',
-            'https://x.com/serotonin_q',
-            'https://x.com/serotonin_q'
+            '',
+            'https://www.instagram.com/boztepe1/',
+            'https://www.linkedin.com/in/ali-boztepe-26557825a/',
+            'https://github.com/Boztepe12'
         ]
     },
     {
@@ -29,10 +29,10 @@ const teamMembers = [
         title: 'Developer Head',
         imgSrc: 'https://media.licdn.com/dms/image/D4D03AQHoaPGOln-HYg/profile-displayphoto-shrink_400_400/0/1709985900431?e=1727308800&v=beta&t=GC37EqVof2DMeWpjXu8lpmhH36mQfm9RtWMQJK28QUc',
         links: [
-            'https://x.com/serotonin_q',
-            'https://x.com/serotonin_q',
-            'https://x.com/serotonin_q',
-            'https://x.com/serotonin_q'
+            '',
+            'https://www.instagram.com/egedeniizzzz/',
+            'https://www.linkedin.com/in/egedenizyasar-516082251/',
+            'https://github.com/egedenizz'
         ]
     },
     {
@@ -82,7 +82,7 @@ const People = () => {
     return (
         <div className="team-container">
             <h2>Meet Our People</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+            <p>Tutkulu zihinler, yaratıcı kalpler ve adanmış ruhlar; ekibimiz başarımızın arkasındaki itici güçtür.</p>
             <div className="team-grid">
                 {teamMembers.map((member, index) => (
                     <div className="team-member" key={index}>
