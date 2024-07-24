@@ -9,7 +9,7 @@ import People from './People/People'
 
 function App() {
   return (
-    <div className="">
+    <div>
       <NavBar />
       <Greeting />
       <Services />
