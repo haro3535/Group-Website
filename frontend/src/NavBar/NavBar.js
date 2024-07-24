@@ -1,5 +1,5 @@
 import { ToggleButtonOnClicked, CloseToggleMenu} from '../utils/NavBarScripts.js';
-import LanguageButton from './LanguageButton.jsx';
+import LanguageButton from './LanguageButton.js';
 
 
 export default function NavBar(){

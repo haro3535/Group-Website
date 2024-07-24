@@ -34,8 +34,9 @@ import Typewriter from 'typewriter-effect';
 
 export default function About() {
     return (
-        <div className="about-container">
-            <div className="text-container">
+        <div className='w-100 flex justify-center items-center'> 
+            <div className="w-3/4 h-100 flex flex-col items-center">
+            <div className="text-container items-center">
             <h1>
                     <Typewriter
                         options={{
@@ -65,6 +66,7 @@ export default function About() {
                     <p>İletişime Geçin</p>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

@@ -60,7 +60,6 @@ body {
 }
 
 .text-container {
-    max-width: 800px;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -68,6 +67,7 @@ body {
 .text-container h1 {
     font-size: 32px;
     color: #333;
+    width: 100%;
     margin-bottom: 20px;
     background-color: #FFA500;
     border-radius: 7px; 
@@ -88,8 +88,10 @@ body {
 
 .image-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    width: 100%;
+    padding-inline: 20%;
+    justify-content: space-around;
+    
 }
 
 .image-box {
