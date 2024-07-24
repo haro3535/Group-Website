@@ -1,33 +1,4 @@
-/*
-import React from 'react';
-import './About.css'; 
-import Typewriter from 'typewriter-effect';
 
-export default function About() {
-    return (
-        <div className="about-container">
-            <div className="text-container">
-                <h1>
-                    <Typewriter
-                        options={{
-                            autoStart: true,
-                            loop: true,
-                            delay: 50,
-                            strings: ['<strong>BoheSA Hakkında</strong>']
-                        }}
-                    />
-                </h1>
-                <p>BoheSA olarak, yazılım dünyasında tutkuyla yaşayan altı kişilik bir ekibiz. Her birimiz aynı bölümde öğrenci olarak başladığımız bu serüvenimize  teknolojiyle sınırları zorlamak için bir araya geldik.</p>
-                <p>Kullanıcı odaklı yaklaşımımız ve yenilikçi çözümler üretme tutkumuzla her projede teknolojinin gücünü keşfetmeye devam ediyoruz. Derin teknik bilgimiz ve birlikte çalışma gücümüzle her zaman önde olmayı hedefliyoruz. BoheSA olarak, geleceği yazılımın gücüyle şekillendiriyor ve teknolojinin getirdiği potansiyeli en üst düzeyde kullanmayı amaçlıyoruz.</p>
-                <p>Herhangi bir projede veya teknolojiyle ilgili keşif yaparken yardıma ihtiyacınız olursa bize her zaman ulaşabilirsiniz!</p>
-            </div>
-            <div className="image-container">
-                <img src="https://t4.ftcdn.net/jpg/03/08/69/75/360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg" alt="Açıklama" />
-            </div>
-        </div>
-    );
-}
-    */
 import React from 'react';
 import './About.css';
 import Typewriter from 'typewriter-effect';
