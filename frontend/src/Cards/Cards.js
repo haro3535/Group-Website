@@ -21,7 +21,12 @@ const Card = ({ title, content, image }) => {
   };
 
   return (
-    <div className="relative bg-white p-6 shadow-md rounded-md flex flex-col justify-between h-full" style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div
+      className="relative bg-white p-6 shadow-md rounded-md flex flex-col justify-between h-full"
+      style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="absolute inset-0 bg-black opacity-30 rounded-md"></div>
       <div className="relative">
         <h2 className={`text-xl font-semibold mb-4 ${isHovered ? 'text-custom-yellow' : 'text-white'}`}>
@@ -61,7 +66,7 @@ const CardsGrid = () => (
 export default function Cards() {
   return (
     <div>
-      <br></br>
+      <br />
       <CardsGrid />
     </div>
   );
