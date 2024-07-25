@@ -80,7 +80,7 @@ const icons = [
 
 const People = () => {
     return (
-        <div className="team-container">
+        <div id= "peoplePart" className="team-container">
             <h2>Meet Our People</h2>
             <p>Tutkulu zihinler, yaratıcı kalpler ve adanmış ruhlar; ekibimiz başarımızın arkasındaki itici güçtür.</p>
             <div className="team-grid">
