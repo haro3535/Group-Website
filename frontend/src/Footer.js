@@ -1,25 +1,22 @@
-//TODO: Group-Website logo path will be added to row 11
-//TODO: The not part on row 15 will be designed
 import React from 'react';
 
 const Footer = () => {
   const handleScrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
-      // Scroll to the element first
+      // Scroll to the top of the element
       sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      
-      // Adjust scroll position to center the element
+
+      // Adjust scroll position if needed
       window.setTimeout(() => {
         const elementRect = sectionElement.getBoundingClientRect();
-        const elementTop = elementRect.top;
-        const elementHeight = elementRect.height;
+        const elementTop = elementRect.top + window.pageYOffset;
         const viewportHeight = window.innerHeight;
-
-        // Calculate the amount to scroll to center the element
-        const scrollOffset = elementTop - (viewportHeight / 2) + (elementHeight / 2);
+        
+        // Calculate offset to position the element's top at the top of the viewport
+        const scrollOffset = elementTop - (viewportHeight / 2) + (elementRect.height / 2);
         window.scrollTo({
-          top: window.pageYOffset + scrollOffset,
+          top: scrollOffset - 100,
           behavior: 'smooth'
         });
       }, 0); // Delay to allow initial scroll
@@ -28,13 +25,14 @@ const Footer = () => {
   
   return (
     <footer className="bg-[var(--blue-fourth)] body-font">
-      <div className="container mx-auto py-24 px-5 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div className="container mx-auto py-6 px-5 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 mx-auto text-center md:text-left">
           <a href='/' className="text-2xl text-[var(--blue-second)]">
             BOHESA
           </a>
           <p className="mt-2 text-sm text-gray-500">
-            We prioritize customer satisfaction by developing websites and software applications equipped with the latest technologies...
+            We prioritize customer satisfaction by developing websites
+            and software applications equipped with the latest technologies, ensuring the best quality in everything we create and will create.
           </p>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
