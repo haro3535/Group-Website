@@ -36,17 +36,17 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="lg:w-1/4 md:w-1/2 w-full px-4 pl-20">
             <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Company</h2>
             <nav className="list-none mb-10">
               <li>
-              <button onClick={() => handleScrollToSection('aboutPart')} className="text-gray-600 hover:text-gray-800">About Us</button>
+              <button onClick={() => handleScrollToSection('aboutPart')} className="text-gray-600 hover:text-gray-800 text-sm">About Us</button>
               </li>
               <li>
-                <a href='/' className="text-gray-600 hover:text-gray-800">Testimonials</a>
+                <a href='/' className="text-sm text-gray-600 hover:text-gray-800">Testimonials</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">FAQ's</a>
+                <a className="text-sm text-gray-600 hover:text-gray-800">FAQ's</a>
               </li>
             </nav>
           </div>
@@ -54,13 +54,13 @@ const Footer = () => {
             <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Useful Links</h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Our process</a>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Our process</a>
               </li>
               <li>
-                <button onClick={() => handleScrollToSection('peoplePart')} className="text-gray-600 hover:text-gray-800">People</button>
+                <button onClick={() => handleScrollToSection('peoplePart')} className="text-sm text-gray-600 hover:text-gray-800">People</button>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Client</a>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Client</a>
               </li>
             </nav>
           </div>
@@ -68,13 +68,13 @@ const Footer = () => {
             <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Follow Us</h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Facebook</a>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Facebook</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Twitter</a>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Instagram</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Google Plus</a>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Google Plus</a>
               </li>
             </nav>
           </div>
