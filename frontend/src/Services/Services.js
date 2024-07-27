@@ -60,7 +60,7 @@ const services = [
             </div>
 
             {/* Service icons */}
-            <div className="grid md:grid-cols-9 flex items-center space-x-6">
+            <div className="grid md:grid-cols-9 items-center" /*maviler varken burada da space-x-6 vardı*/> 
             {services.map((service, index) => (
               <React.Fragment key={index}>
                 <div className="text-center relative group">
