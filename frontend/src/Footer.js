@@ -24,35 +24,37 @@ const Footer = () => {
   };
   
   return (
-    <footer className="bg-[var(--blue-fourth)] body-font">
-      <div className="container mx-auto py-6 px-5 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div className="w-64 flex-shrink-0 mx-auto text-center md:text-left">
+    <footer className="bg-[var(--blue-fourth)] body-font flex flex-col items-center">
+      <div className="py-6 grid md:grid-cols-4 w-3/4">
+        <div className="flex-shrink-0 mx-auto ">
           <a href='/' className="text-2xl text-[var(--blue-second)]">
             BOHESA
           </a>
-          <p className="mt-2 text-sm text-gray-500">
+          <p className="mt-2 text-sm text-gray-500 mb-10">
             We prioritize customer satisfaction by developing websites
             and software applications equipped with the latest technologies, ensuring the best quality in everything we create and will create.
           </p>
         </div>
-        <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4 pl-20">
-            <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Company</h2>
-            <nav className="list-none mb-10">
-              <li>
-              <button onClick={() => handleScrollToSection('aboutPart')} className="text-gray-600 hover:text-gray-800 text-sm">About Us</button>
-              </li>
-              <li>
-                <a href='/' className="text-sm text-gray-600 hover:text-gray-800">Testimonials</a>
-              </li>
-              <li>
-                <a className="text-sm text-gray-600 hover:text-gray-800">FAQ's</a>
-              </li>
-            </nav>
-          </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        <div className="w-full md:flex md:justify-end">
+            <div>
+              <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Company</h2>
+              <ul className="list-none mb-10">
+                <li>
+                <button onClick={() => handleScrollToSection('aboutPart')} className="text-gray-600 hover:text-gray-800 text-sm">About Us</button>
+                </li>
+                <li>
+                  <a href='/' className="text-sm text-gray-600 hover:text-gray-800">Testimonials</a>
+                </li>
+                <li>
+                  <a className="text-sm text-gray-600 hover:text-gray-800">FAQ's</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+        <div className="w-full md:flex md:justify-end">
+          <div>
             <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Useful Links</h2>
-            <nav className="list-none mb-10">
+            <ul className="list-none mb-10">
               <li>
                 <a className="text-sm text-gray-600 hover:text-gray-800">Our process</a>
               </li>
@@ -62,11 +64,13 @@ const Footer = () => {
               <li>
                 <a className="text-sm text-gray-600 hover:text-gray-800">Client</a>
               </li>
-            </nav>
+            </ul>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        </div>
+        <div className="w-full md:flex md:justify-end">
+          <div>
             <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Follow Us</h2>
-            <nav className="list-none mb-10">
+            <ul className="list-none mb-10">
               <li>
                 <a className="text-sm text-gray-600 hover:text-gray-800">Facebook</a>
               </li>
@@ -76,13 +80,13 @@ const Footer = () => {
               <li>
                 <a className="text-sm text-gray-600 hover:text-gray-800">Google Plus</a>
               </li>
-            </nav>
+            </ul>
           </div>
         </div>
       </div>
-      <div className="bg-[var(--blue-third)]">
-        <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-gray-500 text-sm text-center sm:text-left">© 2023 Group-Website</p>
+      <div className="bg-[var(--blue-third)] w-full">
+        <div className="w-3/4 mx-auto py-4 flex flex-wrap flex-col sm:flex-row">
+          <p className="text-gray-500 text-sm text-center sm:text-left">© 2023 Bohesa Inc.</p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <a className="text-gray-500">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">

@@ -39,9 +39,9 @@ const Card = ({ title, content, image }) => {
 };
 
 const CardsGrid = () => (
-  <div className="container mx-auto px-4 py-8">
-    <div className="grid grid-cols-4 gap-6">
-      {cards.slice(0, 4).map((card) => (
+  <div className="w-3/4 py-8">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6">
+      {cards.map((card) => (
         <div key={card.id} className="col-span-1">
           <div className="h-full flex justify-center items-center">
             <Card title={card.title} content={card.content} image={card.image} />
@@ -49,24 +49,13 @@ const CardsGrid = () => (
         </div>
       ))}
     </div>
-    <div className="grid grid-cols-4 gap-6 mt-8">
-      <div className="col-span-1" />
-      {cards.slice(4, 6).map((card) => (
-        <div key={card.id} className="col-span-1">
-          <div className="h-full flex justify-center items-center">
-            <Card title={card.title} content={card.content} image={card.image} />
-          </div>
-        </div>
-      ))}
-      <div className="col-span-2" />
-    </div>
+    
   </div>
 );
 
 export default function Cards() {
   return (
-    <div>
-      <br />
+    <div className='flex justify-center'>
       <CardsGrid />
     </div>
   );

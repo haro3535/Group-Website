@@ -43,7 +43,6 @@ body {
 .image-container {
     display: flex;
     width: 100%;
-    padding-inline: 20%;
     justify-content: space-around;
     
 }
@@ -57,6 +56,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     width: 150px;
+    cursor: pointer;
 }
 
 .image-box img {
