@@ -8,3 +8,15 @@
     overflow: hidden;
     padding-top: 80px; /* Adjust based on the height of your navbar */
 }
+
+.dots-container {
+    position: absolute;
+    bottom: 10px; /* Adjust this value to position dots as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+  

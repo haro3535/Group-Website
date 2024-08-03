@@ -65,14 +65,14 @@ const Carousel = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center space-x-2 mt-4">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`dot ${currentIndex === index ? 'bg-blue-second' : 'bg-blue-second bg-opacity-20'} w-2 h-2 rounded-full`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
+      <div className="dots-container space-x-2 mt-4">
+    {slides.map((_, index) => (
+      <button
+        key={index}
+        className={`dot ${currentIndex === index ? 'bg-blue-second' : 'bg-blue-second bg-opacity-20'} w-2 h-2 rounded-full`}
+        onClick={() => goToSlide(index)}
+      />
+    ))}
       </div>
     </div>
   );
