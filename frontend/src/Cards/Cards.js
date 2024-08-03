@@ -1,15 +1,54 @@
 import React, { useState } from 'react';
+import '../style.css';
 
 const cards = [
-  { id: 1, title: 'Business Intelligence Solutions', content: 'We provide comprehensive business intelligence solutions to help companies make data-driven decisions. Our tools and platforms offer advanced analytics, reporting, and data visualization to turn raw data into actionable insights.', image: 'services-01.jpg' },
-  { id: 2, title: 'Optimization Services', content: 'Our optimization services ensure your software and processes are running at peak efficiency. We analyze and improve your existing systems to reduce costs, enhance performance, and increase productivity.', image: 'services-02.jpg' },
-  { id: 3, title: 'High-Quality Software Development', content: 'We specialize in delivering high-quality software tailored to your business needs. Our team uses the latest technologies and best practices to create robust, scalable, and user-friendly applications.', image: 'services2-03.jpg' },
-  { id: 4, title: 'Enterprise Solutions', content: 'Our enterprise solutions are designed to address the complex needs of large organizations. We offer customized software that integrates seamlessly with your existing infrastructure, ensuring smooth operations and enhanced capabilities.', image: 'services-04.jpg' },
-  { id: 5, title: 'Security Solutions', content: 'Protect your business with our top-notch security solutions. We provide comprehensive cybersecurity services, including risk assessments, threat detection, and mitigation strategies to safeguard your data and systems.', image: 'services-05.jpg' },
-  { id: 6, title: 'Automation Services', content: 'Increase efficiency and reduce manual effort with our automation services. We develop automated solutions for repetitive tasks, enabling your team to focus on more strategic initiatives and driving business growth.', image: 'services-06.jpg' },
+  { id: 1, title: 'Business Intelligence Solutions', content: 'We provide comprehensive business intelligence solutions to help companies make data-driven decisions. Our tools and platforms offer advanced analytics, reporting, and data visualization to turn raw data into actionable insights.'},
+  { id: 2, title: 'Optimization Services', content: 'Our optimization services ensure your software and processes are running at peak efficiency. We analyze and improve your existing systems to reduce costs, enhance performance, and increase productivity.' },
+  { id: 3, title: 'High-Quality Software Development', content: 'We specialize in delivering high-quality software tailored to your business needs. Our team uses the latest technologies and best practices to create robust, scalable, and user-friendly applications.' },
+  { id: 4, title: 'Enterprise Solutions', content: 'Our enterprise solutions are designed to address the complex needs of large organizations. We offer customized software that integrates seamlessly with your existing infrastructure, ensuring smooth operations and enhanced capabilities.'},
+  { id: 5, title: 'Security Solutions', content: 'Protect your business with our top-notch security solutions. We provide comprehensive cybersecurity services, including risk assessments, threat detection, and mitigation strategies to safeguard your data and systems.' },
+  { id: 6, title: 'Automation Services', content: 'Increase efficiency and reduce manual effort with our automation services. We develop automated solutions for repetitive tasks, enabling your team to focus on more strategic initiatives and driving business growth.' },
 ];
 
-const Card = ({ title, content, image }) => {
+const icon1 = (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  < path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+</svg>
+);
+
+const icon2 = (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+    <path d="M4.94436 8.04069L10.8282 8.04069M2 18L7.49762 12.5862C7.70914 12.3779 8.03957 12.3544 8.27806 12.5308L12.5239 15.6712C12.774 15.8563 13.1229 15.8204 13.3306 15.5883L21.2849 6.70262M18.1084 6H20.9306C21.4785 6 21.9259 6.44077 21.9371 6.99179L22 10.0649" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+);
+
+const icon3 = (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+  </svg>
+);
+
+const icon4 = (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" />
+  </svg>
+);
+
+const icon5 = (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+</svg>
+
+);
+const icon6 = (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+  </svg>
+);
+
+
+const Card = ({ title, content, icon }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -22,39 +61,57 @@ const Card = ({ title, content, image }) => {
 
   return (
     <div
-      className="relative bg-white p-6 shadow-md rounded-md flex flex-col justify-between h-full"
-      style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '300px' }}
+      className="card"
+      
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="absolute inset-0 bg-black opacity-30 rounded-md"></div>
-      <div className="relative">
-        <h2 className={`text-xl font-semibold mb-4 ${isHovered ? 'text-custom-yellow' : 'text-white'}`}>
-          <span className={`font-bold leading-none transition-all duration-300 ${isHovered ? 'text-5xl' : 'text-4xl'}`}>{title.charAt(0)}</span>{title.slice(1)}
-        </h2>
-        <p className="text-gray-200">{content}</p>
+      <div className="absolute inset-0 bg-bcg-light-gray opacity-30 rounded-md"></div>
+      <div className="relative pt-0">
+        {/* Icon positioned above the card */}
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 top-[-70px] flex items-center justify-center"
+          
+        >
+          <div className="icon-background-cards">
+            {icon}
+          </div>
+        </div>
+        <div className="pt-3">
+          <h2 className={`text-xl font-semibold mb-4 ${isHovered ? 'text-blue-second' : 'text-blue-second'}`}>
+            <span className={`font-bold leading-none transition-all duration-300 ${isHovered ? 'text-3xl' : 'text-xl'}`}>{title.charAt(0)}</span>{title.slice(1)}
+          </h2>
+          <p className="text-light-gray">{content}</p>
+        </div>
       </div>
     </div>
   );
 };
 
 const CardsGrid = () => (
-  <div className="container mx-auto px-4 py-8">
-    <div className="grid grid-cols-4 gap-6">
-      {cards.slice(0, 4).map((card) => (
+  <div className="container mx-auto px-4 py-8 bg-white">
+    <div className="flex flex-col items-center mb-6">
+      <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Empowering businesses through innovative technology</h2>
+      <h1 className="text-sm font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Ready to take your business to the next level? </h1>
+      <h1 className="text-sm font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Our mission is to provide top-notch software solutions suitable for your business.</h1>
+    </div>
+    
+    {/* Add margin-top to create space between the header and the card grid */}
+    <div className="grid grid-cols-4 gap-6 mt-12">
+      {cards.slice(0, 4).map((card, index) => (
         <div key={card.id} className="col-span-1">
           <div className="h-full flex justify-center items-center">
-            <Card title={card.title} content={card.content} image={card.image} />
+            <Card title={card.title} content={card.content} icon={[icon1, icon2, icon3, icon4][index]} />
           </div>
         </div>
       ))}
     </div>
     <div className="grid grid-cols-4 gap-6 mt-8">
       <div className="col-span-1" />
-      {cards.slice(4, 6).map((card) => (
+      {cards.slice(4, 6).map((card, index) => (
         <div key={card.id} className="col-span-1">
           <div className="h-full flex justify-center items-center">
-            <Card title={card.title} content={card.content} image={card.image} />
+            <Card title={card.title} content={card.content} icon={[icon5, icon6][index]} />
           </div>
         </div>
       ))}
@@ -66,7 +123,6 @@ const CardsGrid = () => (
 export default function Cards() {
   return (
     <div>
-      <br />
       <CardsGrid />
     </div>
   );

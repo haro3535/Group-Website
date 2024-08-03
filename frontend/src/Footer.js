@@ -1,6 +1,7 @@
 //TODO: Group-Website logo path will be added to row 11
 //TODO: The not part on row 15 will be designed
 import React from 'react';
+import './style.css';
 
 const Footer = () => {
   const handleScrollToSection = (sectionId) => {
@@ -27,86 +28,86 @@ const Footer = () => {
   };
   
   return (
-    <footer className="bg-[var(--blue-fourth)] body-font">
+    <footer className="bg-custom-gray-dark body-font">
       <div className="container mx-auto py-24 px-5 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 mx-auto text-center md:text-left">
-          <a href='/' className="text-2xl text-[var(--blue-second)]">
-            BOHESA
+          <a href='/' className="text-4xl font-bold font-inter text-blue-third">
+            Bohesa
           </a>
-          <p className="mt-2 text-sm text-gray-500">
+          <p className="mt-2 text-sm text-bcg-light-gray">
             We prioritize customer satisfaction by developing websites and software applications equipped with the latest technologies...
           </p>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Company</h2>
+            <h2 className="title-font font-bold text-white tracking-widest text-sm mb-3">Company</h2>
             <nav className="list-none mb-10">
               <li>
-              <button onClick={() => handleScrollToSection('aboutPart')} className="text-gray-600 hover:text-gray-800">About Us</button>
+              <button onClick={() => handleScrollToSection('aboutPart')} className="text-bcg-light-gray hover:text-blue-third">About Us</button>
               </li>
               <li>
-                <a href='/' className="text-gray-600 hover:text-gray-800">Testimonials</a>
+                <a href='/' className="text-bcg-light-gray hover:text-blue-third">Testimonials</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">FAQ's</a>
+                <a className="text-bcg-light-gray hover:text-blue-third">FAQ's</a>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Useful Links</h2>
+            <h2 className="title-font font-bold text-white tracking-widest text-sm mb-3">Useful Links</h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Our process</a>
+                <a className="text-bcg-light-gray hover:text-blue-third">Our process</a>
               </li>
               <li>
-                <button onClick={() => handleScrollToSection('peoplePart')} className="text-gray-600 hover:text-gray-800">People</button>
+                <button onClick={() => handleScrollToSection('peoplePart')} className="text-bcg-light-gray hover:text-blue-third">People</button>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Client</a>
+                <a className="text-bcg-light-gray hover:text-blue-third">Client</a>
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Follow Us</h2>
+            <h2 className="title-font font-bold text-white tracking-widest text-sm mb-3">Follow Us</h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Facebook</a>
+                <a className="text-bcg-light-gray hover:text-blue-third">Facebook</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Twitter</a>
+                <a className="text-bcg-light-gray hover:text-blue-third">Twitter</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Google Plus</a>
+                <a className="text-bcg-light-gray hover:text-blue-third">Google Plus</a>
               </li>
             </nav>
           </div>
         </div>
       </div>
-      <div className="bg-[var(--blue-third)]">
+      <div className="bg-custom-gray-dark">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-gray-500 text-sm text-center sm:text-left">© 2023 Group-Website</p>
+          <p className="text-white text-sm text-center sm:text-left">© 2023 Group-Website</p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <a className="text-gray-500">
+            <a className="text-white">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M18.36 6.64a9 9 0 11-12.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>
             </a>
-            <a className="ml-3 text-gray-500">
+            <a className="ml-3 text-white">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M7.88 6.64a9 9 0 0112.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>
             </a>
-            <a className="ml-3 text-gray-500">
+            <a className="ml-3 text-white">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M7.88 6.64a9 9 0 0112.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>
             </a>
-            <a className="ml-3 text-gray-500">
+            <a className="ml-3 text-white">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M7.88 6.64a9 9 0 0112.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>
             </a>
-            <a className="ml-3 text-gray-500">
+            <a className="ml-3 text-white">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M7.88 6.64a9 9 0 0112.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>

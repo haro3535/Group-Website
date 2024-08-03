@@ -9,16 +9,16 @@ export default function NavBar(){
                 items-center border-b-[1px] border-gray-300 z-10" >
                 <div className='w-full flex justify-center items-center'>
                     <div id='nav-element' className="h-[12vh] w-3/4 flex justify-between items-center transition-[height] duration-[0.4s] ease-in-out">
-                        <a href='/' className="text-2xl text-[var(--blue-second)]" >
+                        <a href='/' className="text-2xl font-bold font-inter text-[var(--blue-second)]" >
                             BOHESA
                         </a>
                         <div className="lg:flex hidden">
-                            <ul className="flex space-x-5 cursor-pointer">
-                                <li>Hakkımızda</li>
-                                <li>Projelerimiz</li>
-                                <li>Ekibimiz</li>
-                                <li>Referanslarımız</li>
-                                <li>İletişim</li>
+                            <ul className="flex space-x-5 cursor-pointer font-inter text-light-gray">
+                                <li>Services</li>
+                                <li>Solutions</li>
+                                <li>Community</li>
+                                <li>About</li>
+                                <li>Contact</li>
                             </ul>
                         </div>
                         <div className='hidden lg:block'>
