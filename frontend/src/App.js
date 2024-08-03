@@ -8,7 +8,7 @@ import Services from './Services/Services';
 import Cards from './Cards/Cards';
 import People from './People/People';
 import Community from './Community/Community';
-
+import Carousel from './Carousel/Carousel';
 
 function App() {
   return (
@@ -17,7 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
-            <Greeting />
+            <NavBar />
+            <Carousel />
             <Services />
             <Cards />
             <Community />
