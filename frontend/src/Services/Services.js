@@ -67,6 +67,7 @@ export default function Services() {
           <h1 className="text-sm font-normal inter-font" style={{  color: 'var(--light-gray)' }}>Tailored solutions to meet your specific needs.</h1>
         </div>
 
+<<<<<<< HEAD
         {/* Service icons */}
         <div className="flex justify-between items-center w-full">
           {services.map((service, index) => (
@@ -89,4 +90,55 @@ export default function Services() {
     </div>
   );
 }
+=======
+
+
+
+
+  export default function Services() {
+    return (
+        <div className="w-full flex justify-center items-center py-10 bg-white">
+          <div className="w-3/4 flex flex-col items-center">
+            {/* Header */}
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="flex-1 h-0.5 bg-gray-300"></div>
+              <h2 className="text-2xl font-bold text-gray-900">OUR SERVICES</h2>
+              <div className="flex-1 h-0.5 bg-gray-300"></div>
+            </div>
+
+            {/* Service icons */}
+            <div className="grid md:grid-cols-9 items-center" /*maviler varken burada da space-x-6 vardı*/> 
+            {services.map((service, index) => (
+              <React.Fragment key={index}>
+                <div className="text-center relative group">
+                  <div className="w-24 h-24 bg-custom-gray rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300 group-hover:bg-custom-yellow">
+                    <span className="text-white group-hover:text-custom-gray">{service.icon}</span>
+                  </div>
+                  <p className="text-sm font-medium">{service.title}</p>
+                </div>
+                {index < services.length - 1 && (
+                  <svg
+                    key={`divider-${index}`}
+                    className="w-6 h-6 text-custom-yellow"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 0 24" //0 0 24 24 mavileri geri getirmek için
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
+                    />
+                  </svg>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+>>>>>>> c0c994affa0da6a80293627d721523e6e92405bd
   

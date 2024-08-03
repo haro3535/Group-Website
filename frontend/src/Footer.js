@@ -1,5 +1,3 @@
-//TODO: Group-Website logo path will be added to row 11
-//TODO: The not part on row 15 will be designed
 import React from 'react';
 import './style.css';
 
@@ -7,20 +5,19 @@ const Footer = () => {
   const handleScrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
-      // Scroll to the element first
+      // Scroll to the top of the element
       sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      
-      // Adjust scroll position to center the element
+
+      // Adjust scroll position if needed
       window.setTimeout(() => {
         const elementRect = sectionElement.getBoundingClientRect();
-        const elementTop = elementRect.top;
-        const elementHeight = elementRect.height;
+        const elementTop = elementRect.top + window.pageYOffset;
         const viewportHeight = window.innerHeight;
-
-        // Calculate the amount to scroll to center the element
-        const scrollOffset = elementTop - (viewportHeight / 2) + (elementHeight / 2);
+        
+        // Calculate offset to position the element's top at the top of the viewport
+        const scrollOffset = elementTop - (viewportHeight / 2) + (elementRect.height / 2);
         window.scrollTo({
-          top: window.pageYOffset + scrollOffset,
+          top: scrollOffset - 100,
           behavior: 'smooth'
         });
       }, 0); // Delay to allow initial scroll
@@ -28,6 +25,7 @@ const Footer = () => {
   };
   
   return (
+<<<<<<< HEAD
     <footer className="bg-custom-gray-dark body-font">
       <div className="container mx-auto py-24 px-5 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 mx-auto text-center md:text-left">
@@ -64,9 +62,51 @@ const Footer = () => {
               </li>
               <li>
                 <a className="text-bcg-light-gray hover:text-blue-third">Client</a>
+=======
+    <footer className="bg-[var(--blue-fourth)] body-font flex flex-col items-center">
+      <div className="py-6 grid md:grid-cols-4 w-3/4">
+        <div className="flex-shrink-0 mx-auto ">
+          <a href='/' className="text-2xl text-[var(--blue-second)]">
+            BOHESA
+          </a>
+          <p className="mt-2 text-sm text-gray-500 mb-10">
+            We prioritize customer satisfaction by developing websites
+            and software applications equipped with the latest technologies, ensuring the best quality in everything we create and will create.
+          </p>
+        </div>
+        <div className="w-full md:flex md:justify-end">
+            <div>
+              <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Company</h2>
+              <ul className="list-none mb-10">
+                <li>
+                <button onClick={() => handleScrollToSection('aboutPart')} className="text-gray-600 hover:text-gray-800 text-sm">About Us</button>
+                </li>
+                <li>
+                  <a href='/' className="text-sm text-gray-600 hover:text-gray-800">Testimonials</a>
+                </li>
+                <li>
+                  <a className="text-sm text-gray-600 hover:text-gray-800">FAQ's</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+        <div className="w-full md:flex md:justify-end">
+          <div>
+            <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Useful Links</h2>
+            <ul className="list-none mb-10">
+              <li>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Our process</a>
               </li>
-            </nav>
+              <li>
+                <button onClick={() => handleScrollToSection('peoplePart')} className="text-sm text-gray-600 hover:text-gray-800">People</button>
+              </li>
+              <li>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Client</a>
+>>>>>>> c0c994affa0da6a80293627d721523e6e92405bd
+              </li>
+            </ul>
           </div>
+<<<<<<< HEAD
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-bold text-white tracking-widest text-sm mb-3">Follow Us</h2>
             <nav className="list-none mb-10">
@@ -78,14 +118,35 @@ const Footer = () => {
               </li>
               <li>
                 <a className="text-bcg-light-gray hover:text-blue-third">Google Plus</a>
+=======
+        </div>
+        <div className="w-full md:flex md:justify-end">
+          <div>
+            <h2 className="title-font font-medium text-[var(--blue-first)] tracking-widest text-sm mb-3">Follow Us</h2>
+            <ul className="list-none mb-10">
+              <li>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Facebook</a>
               </li>
-            </nav>
+              <li>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Instagram</a>
+              </li>
+              <li>
+                <a className="text-sm text-gray-600 hover:text-gray-800">Google Plus</a>
+>>>>>>> c0c994affa0da6a80293627d721523e6e92405bd
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div className="bg-custom-gray-dark">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-white text-sm text-center sm:text-left">© 2023 Group-Website</p>
+=======
+      <div className="bg-[var(--blue-third)] w-full">
+        <div className="w-3/4 mx-auto py-4 flex flex-wrap flex-col sm:flex-row">
+          <p className="text-gray-500 text-sm text-center sm:text-left">© 2023 Bohesa Inc.</p>
+>>>>>>> c0c994affa0da6a80293627d721523e6e92405bd
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <a className="text-white">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">

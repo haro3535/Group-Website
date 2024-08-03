@@ -13,12 +13,21 @@ export default function NavBar(){
                             BOHESA
                         </a>
                         <div className="lg:flex hidden">
+<<<<<<< HEAD
                             <ul className="flex space-x-5 cursor-pointer font-inter text-light-gray">
                                 <li>Services</li>
                                 <li>Solutions</li>
                                 <li>Community</li>
                                 <li>About</li>
                                 <li>Contact</li>
+=======
+                            <ul className="flex space-x-5 cursor-pointer">
+                                <li><a href='#about'>Hakkımızda</a></li>
+                                <li><a href='#project'>Projelerimiz</a></li>
+                                <li><a href='#people'>Ekibimiz</a></li>
+                                <li><a href='#ref'>Referanslarımız</a></li>
+                                <li><a href='#contect'>İletişim</a></li>
+>>>>>>> c0c994affa0da6a80293627d721523e6e92405bd
                             </ul>
                         </div>
                         <div className='hidden lg:block'>
@@ -32,7 +41,6 @@ export default function NavBar(){
                 <div id='toggle-menu' className="w-full lg:hidden bg-white fixed hidden justify-center border-y-[1px] border-gray-300 transition-[max-height] duration-500 ease-in-out overflow-hidden h-0">
                     <div className='w-full flex flex-col items-center'>
                         <ul className="cursor-pointer relative w-3/4">
-                            <li className="py-2" onClick={CloseToggleMenu}>Ana Sayfa</li>
                             <li className="py-2" onClick={CloseToggleMenu}>Hakkımızda</li>
                             <li className="py-2" onClick={CloseToggleMenu}>Projelerimiz</li>
                             <li className="py-2" onClick={CloseToggleMenu}>Referanslarımız</li>

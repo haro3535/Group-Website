@@ -80,22 +80,24 @@ const icons = [
 
 const People = () => {
     return (
-        <div id= "peoplePart" className="team-container">
-            <h2>Meet Our People</h2>
-            <p>Tutkulu zihinler, yaratıcı kalpler ve adanmış ruhlar; ekibimiz başarımızın arkasındaki itici güçtür.</p>
-            <div className="team-grid">
+        <div id="peoplePart" className="flex flex-col items-center team-container w-full">
+            <h2 className='w-3/4 text-center'>Meet Our People</h2>
+            <p className='w-3/4 text-center'>Tutkulu zihinler, yaratıcı kalpler ve adanmış ruhlar; ekibimiz başarımızın arkasındaki itici güçtür.</p>
+            <div className="w-3/4 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 my-4">
                 {teamMembers.map((member, index) => (
-                    <div className="team-member" key={index}>
-                        <img src={member.imgSrc} alt={member.name} />
-                        <h3>{member.name}</h3>
-                        <div className="title-line" />
-                        <p>{member.title}</p>
-                        <div className="icons-container">
-                            {member.links.map((link, i) => (
-                                <a href={link} target="_blank" rel="noopener noreferrer" key={i}>
-                                    <img src={icons[i]} alt={`Icon ${i + 1}`} />
-                                </a>
-                            ))}
+                    <div className='w-full flex justify-center items-center'>
+                        <div className="team-member w-full h-full" key={index}>
+                            <img src={member.imgSrc} alt={member.name} />
+                            <h3>{member.name}</h3>
+                            <div className="title-line" />
+                            <p>{member.title}</p>
+                            <div className="icons-container">
+                                {member.links.map((link, i) => (
+                                    <a href={link} target="_blank" rel="noopener noreferrer" key={i}>
+                                        <img src={icons[i]} alt={`Icon ${i + 1}`} />
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 ))}
