@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 
 export default function About() {
     return (
-        <div id="aboutPart" className='w-full flex justify-center items-center py-10'> 
+        <div id="aboutPart" className='w-100 flex justify-center items-center'> 
             <div className="w-3/4 h-100 flex flex-col items-center">
                 <div className="text-container items-center">
                     <h1>
@@ -13,13 +13,13 @@ export default function About() {
                                 autoStart: true,
                                 loop: true,
                                 delay: 50,
-                                strings: ['<strong>Hoşgeldiniz, Biz BOHESA\'yız</strong>']
+                                strings: ['<strong>Hoşgeldiniz, Biz Bohesayız</strong>']
                             }}
                         />
                     </h1>
                     <div className="paragraphs">
-                        <p>BOHESA olarak, yazılım dünyasında tutkuyla yaşayan altı kişilik bir ekibiz. Her birimiz aynı bölümde öğrenci olarak başladığımız bu serüvenimize  teknolojiyle sınırları zorlamak için bir araya geldik.Kullanıcı odaklı yaklaşımımız ve yenilikçi çözümler üretme tutkumuzla her projede teknolojinin gücünü keşfetmeye devam ediyoruz.</p>
-                        <p>Derin teknik bilgimiz ve birlikte çalışma gücümüzle her zaman önde olmayı hedefliyoruz. BOHESA olarak, geleceği yazılımın gücüyle şekillendiriyor ve teknolojinin getirdiği potansiyeli en üst düzeyde kullanmayı amaçlıyoruz.Herhangi bir projede veya teknolojiyle ilgili keşif yaparken yardıma ihtiyacınız olursa bize her zaman ulaşabilirsiniz!</p>
+                        <p>BoheSA olarak, yazılım dünyasında tutkuyla yaşayan altı kişilik bir ekibiz. Her birimiz aynı bölümde öğrenci olarak başladığımız bu serüvenimize  teknolojiyle sınırları zorlamak için bir araya geldik.Kullanıcı odaklı yaklaşımımız ve yenilikçi çözümler üretme tutkumuzla her projede teknolojinin gücünü keşfetmeye devam ediyoruz.</p>
+                        <p>Derin teknik bilgimiz ve birlikte çalışma gücümüzle her zaman önde olmayı hedefliyoruz. BoheSA olarak, geleceği yazılımın gücüyle şekillendiriyor ve teknolojinin getirdiği potansiyeli en üst düzeyde kullanmayı amaçlıyoruz.Herhangi bir projede veya teknolojiyle ilgili keşif yaparken yardıma ihtiyacınız olursa bize her zaman ulaşabilirsiniz!</p>
                     </div>
                 </div>
                 <div className="image-container">
