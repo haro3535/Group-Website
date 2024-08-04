@@ -73,32 +73,48 @@
   justify-content: center;
   margin-bottom: 2px;
 }
-.icon-background-cards {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  background-color: var(--bcg-light-gray); /* Set background color to white */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
 .card {
-  background-color: var(--bcg-light-gray); /* Replace with your background color */
+  background-color: var(--bcg-light-gray);
   margin: 25px;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
-  border-radius: 8px; /* Adjust border radius as needed */
+  padding: 25px; /* Adjust padding to provide space for the icon */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px; /* Adjust height as needed */
-  width: 300px; /* Adjust width as needed */
+  height: 300px;
+  width: 300px;
   position: relative;
-  text-align: center; /* Center text horizontally */
+  text-align: center;
+}
+.icon-background-cards {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;/* Space between the icon and the title */
+  border-radius: 50%;
+  position: relative;
+}
+.card-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* Space between the icon and the title */
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.grid-item {
+  flex: 1 1 300px;
+  max-width: 300px;
 }
 .card-community {
   background-color: var(white); /* Use CSS variable or directly specify the color */
@@ -114,6 +130,7 @@
   position: relative;
   text-align: center; /* Center text horizontally */
 }
+
 .grid-community {
   display: flex;
   justify-content: center;
@@ -132,4 +149,5 @@
   border-radius: 10px 5px 10px 5px;
   margin-left: 25px
 }
+
 

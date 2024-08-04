@@ -17,8 +17,8 @@ const icon1 = (
 );
 
 const icon2 = (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-    <path d="M4.94436 8.04069L10.8282 8.04069M2 18L7.49762 12.5862C7.70914 12.3779 8.03957 12.3544 8.27806 12.5308L12.5239 15.6712C12.774 15.8563 13.1229 15.8204 13.3306 15.5883L21.2849 6.70262M18.1084 6H20.9306C21.4785 6 21.9259 6.44077 21.9371 6.99179L22 10.0649" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
   </svg>
 );
 
@@ -46,43 +46,28 @@ const icon6 = (
     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
   </svg>
 );
-
+const icons = [icon1, icon2, icon3, icon4, icon5, icon6];
 
 const Card = ({ title, content, icon }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
 
   return (
     <div
       className="card"
-      
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="absolute inset-0 bg-bcg-light-gray opacity-30 rounded-md"></div>
-      <div className="relative pt-0">
-        {/* Icon positioned above the card */}
-        <div
-          className="absolute left-1/2 transform -translate-x-1/2 top-[-70px] flex items-center justify-center"
-          
-        >
-          <div className="icon-background-cards">
-            {icon}
-          </div>
-        </div>
-        <div className="pt-3">
-          <h2 className={`text-xl font-semibold mb-4 ${isHovered ? 'text-blue-second' : 'text-blue-second'}`}>
-            <span className={`font-bold leading-none transition-all duration-300 ${isHovered ? 'text-3xl' : 'text-xl'}`}>{title.charAt(0)}</span>{title.slice(1)}
-          </h2>
-          <p className="text-light-gray">{content}</p>
-        </div>
+      <div className="icon-background-cards text-custom-gray">
+        {icon}
+      </div>
+      <div className="card-title-container">
+        <h2 className={`text-xl font-semibold mb-4 ${isHovered ? 'text-blue-second' : 'text-blue-second'}`}>
+          <span className={`font-bold leading-none transition-all duration-300 ${isHovered ? 'text-3xl' : 'text-xl'}`}>{title.charAt(0)}</span>{title.slice(1)}
+        </h2>
+        <p className="text-light-gray">{content}</p>
       </div>
     </div>
   );
@@ -91,31 +76,31 @@ const Card = ({ title, content, icon }) => {
 const CardsGrid = () => (
   <div className="container mx-auto px-4 py-8 bg-white">
     <div className="flex flex-col items-center mb-6">
-      <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Empowering businesses through innovative technology</h2>
-      <h1 className="text-sm font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Ready to take your business to the next level? </h1>
-      <h1 className="text-sm font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Our mission is to provide top-notch software solutions suitable for your business.</h1>
+      <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>
+        Empowering businesses through innovative technology
+      </h2>
+      <h1 className="text-sm font-normal inter-font" style={{ color: 'var(--light-gray)' }}>
+        Ready to take your business to the next level? Our mission is to provide top-notch software solutions suitable for your business.
+      </h1>
     </div>
-    
-    {/* Add margin-top to create space between the header and the card grid */}
-    <div className="grid grid-cols-4 gap-6 mt-12">
+
+    {/* Responsive Grid Layout */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {cards.slice(0, 4).map((card, index) => (
         <div key={card.id} className="col-span-1">
-          <div className="h-full flex justify-center items-center">
-            <Card title={card.title} content={card.content} icon={[icon1, icon2, icon3, icon4][index]} />
-          </div>
+          <Card title={card.title} content={card.content} icon={icons[index]} />
         </div>
       ))}
     </div>
-    <div className="grid grid-cols-4 gap-6 mt-8">
-      <div className="col-span-1" />
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+      <div className="col-span-2 lg:col-span-1"></div>
       {cards.slice(4, 6).map((card, index) => (
         <div key={card.id} className="col-span-1">
-          <div className="h-full flex justify-center items-center">
-            <Card title={card.title} content={card.content} icon={[icon5, icon6][index]} />
-          </div>
+          <Card title={card.title} content={card.content} icon={icons[index + 4]} />
         </div>
       ))}
-      <div className="col-span-2" />
+      <div className="col-span-2 lg:col-span-1"></div>
     </div>
   </div>
 );
