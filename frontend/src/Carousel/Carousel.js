@@ -55,7 +55,7 @@ const Carousel = () => {
           {slides.map((slide, index) => (
             <div key={index} className="min-w-full flex items-center justify-center bg-bcg-light-gray">
               <div className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} text-center p-8`}>
-                <img src={slide.src} alt={`Slide ${index + 1}`} className="w-full md:w-1/2 mx-auto mb-4 md:mb-0" />
+                <img src={slide.src} alt={`Slide ${index + 1}`} className="w-full md:w-1/2 mx-auto mb-4 md:mb-0 max-h-300" />
                 <div className="w-full md:w-1/2 md:text-left">
                   <p className="text-4xl font-inter font-semibold text-custom-gray">{slide.text}</p>
                   <p className="text-sm mt-2 font-inter italic text-light-gray">{slide.subText}</p>
@@ -66,13 +66,13 @@ const Carousel = () => {
         </div>
       </div>
       <div className="dots-container space-x-2 mt-4">
-    {slides.map((_, index) => (
-      <button
-        key={index}
-        className={`dot ${currentIndex === index ? 'bg-blue-second' : 'bg-blue-second bg-opacity-20'} w-2 h-2 rounded-full`}
-        onClick={() => goToSlide(index)}
-      />
-    ))}
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            className={`dot ${currentIndex === index ? 'bg-blue-second' : 'bg-blue-second bg-opacity-20'} w-2 h-2 rounded-full`}
+            onClick={() => goToSlide(index)}
+          />
+        ))}
       </div>
     </div>
   );
