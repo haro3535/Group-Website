@@ -26,7 +26,7 @@ const icon3 = (
 );
 
 const Card = ({ title, content, icon }) => (
-    <div className="card-community bg-white rounded-md shadow-md p-6 text-center">
+    <div id="community" className="card-community bg-white rounded-md shadow-md p-6 text-center">
       <div className="flex items-center justify-center mb-4">
         <div className="icon-container-community">
           {icon}

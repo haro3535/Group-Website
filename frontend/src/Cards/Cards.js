@@ -74,7 +74,7 @@ const Card = ({ title, content, icon }) => {
 };
 
 const CardsGrid = () => (
-  <div className="container mx-auto px-4 py-8 bg-white">
+  <div id="solutions" className="container mx-auto px-4 py-8 bg-white">
     <div className="flex flex-col items-center mb-6">
       <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>
         Empowering businesses through innovative technology

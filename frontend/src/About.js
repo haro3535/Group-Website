@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
     return (
-        <div className="flex justify-center items-center py-10 bg-white">
+        <div id="about" className="flex justify-center items-center py-10 bg-white">
             <div className="flex flex-col md:flex-row items-center w-full max-w-screen-xl px-4">
                 {/* Image */}
                 <div className="md:w-1/2 mb-6 md:mb-0">
