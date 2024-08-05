@@ -39,14 +39,14 @@ const Card = ({ title, content, icon }) => (
 );
 
 const CardsGrid = () => (
-  <div className="container mx-auto px-4 py-8 bg-bcg-light-gray">
+  <div className="mx-auto px-4 py-8 bg-bcg-light-gray">
     <div className="flex flex-col items-center mb-12">
       <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Our Community</h2>
       <h1 className="text-sm font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Who is Bohesa suitable for?</h1>
     </div>
     
     <div className="flex justify-center">
-      <div className="grid grid-cols-3 gap-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32 ">
         {cards.map((card, index) => (
           <Card key={card.id} title={card.title} content={card.content} icon={[icon1, icon2, icon3][index]} />
         ))}

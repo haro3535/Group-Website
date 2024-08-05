@@ -84,8 +84,8 @@ const CardsGrid = () => (
       </h1>
     </div>
 
-    {/* Responsive Grid Layout */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 gap-6">
       {cards.slice(0, 4).map((card, index) => (
         <div key={card.id} className="col-span-1">
           <Card title={card.title} content={card.content} icon={icons[index]} />
@@ -93,14 +93,14 @@ const CardsGrid = () => (
       ))}
     </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-      <div className="col-span-2 lg:col-span-1"></div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-8">
+      <div className="col-span-1 sm:col-span-2 xl:col-span-1"></div>
       {cards.slice(4, 6).map((card, index) => (
         <div key={card.id} className="col-span-1">
           <Card title={card.title} content={card.content} icon={icons[index + 4]} />
         </div>
       ))}
-      <div className="col-span-2 lg:col-span-1"></div>
+      <div className="col-span-1 sm:col-span-2 xl:col-span-1"></div>
     </div>
   </div>
 );
