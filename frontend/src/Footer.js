@@ -28,91 +28,100 @@ const Footer = () => {
   };
   
   return (
-    <footer className="bg-custom-gray-dark body-font">
-      <div className="container mx-auto py-24 px-5 flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div className="w-64 flex-shrink-0 mx-auto text-center md:text-left">
-          <a href='/' className="text-4xl font-bold font-inter text-blue-third">
+    <footer className="bg-bcg-light-gray body-font flex flex-col items-center">
+      <div className="w-3/4 grid lg:grid-cols-4 grid-cols-1 py-10 space-y-5 lg:space-y-0">
+        <div className="w-full mb-5">
+          <a href='/' className="text-4xl font-bold font-inter text-blue-second">
             Bohesa
           </a>
-          <p className="mt-2 text-sm text-bcg-light-gray">
+          <p className="mt-2 text-sm text-light-gray">
             We prioritize customer satisfaction by developing websites and software applications equipped with the latest technologies...
           </p>
         </div>
-        <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-bold text-white tracking-widest text-sm mb-3">Company</h2>
-            <nav className="list-none mb-10">
+        <div className="w-full flex justify-end">
+          <div className='lg:w-1/2 w-full'>
+            <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Company</h2>
+            <div className="list-none mb-10">
               <li>
-              <button onClick={() => handleScrollToSection('aboutPart')} className="text-bcg-light-gray hover:text-blue-third">About Us</button>
+              <button onClick={() => handleScrollToSection('aboutPart')} className="text-light-gray hover:text-blue-third">About Us</button>
               </li>
               <li>
-                <a href='/' className="text-bcg-light-gray hover:text-blue-third">Testimonials</a>
+                <a href='/' className="text-light-gray hover:text-blue-third">Testimonials</a>
               </li>
               <li>
-                <a className="text-bcg-light-gray hover:text-blue-third">FAQ's</a>
+                {/*<a className="text-light-gray hover:text-blue-third">FAQ's</a> */}
               </li>
-            </nav>
+            </div>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-bold text-white tracking-widest text-sm mb-3">Useful Links</h2>
-            <nav className="list-none mb-10">
+        </div>
+        <div className="w-full flex justify-end">
+          <div className='lg:w-1/2 w-full'>
+            <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Useful Links</h2>
+            <div className="list-none mb-10">
               <li>
-                <a className="text-bcg-light-gray hover:text-blue-third">Our process</a>
+                <a className="text-light-gray hover:text-blue-third">Our services</a>
               </li>
               <li>
-                <button onClick={() => handleScrollToSection('peoplePart')} className="text-bcg-light-gray hover:text-blue-third">People</button>
+                <button onClick={() => handleScrollToSection('peoplePart')} className="text-light-gray hover:text-blue-third">People</button>
               </li>
               <li>
-                <a className="text-bcg-light-gray hover:text-blue-third">Client</a>
+                <a className="text-light-gray hover:text-blue-third">Client</a>
               </li>
-            </nav>
+            </div>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-bold text-white tracking-widest text-sm mb-3">Follow Us</h2>
-            <nav className="list-none mb-10">
+        </div>
+        <div className="w-full flex justify-end">
+          <div className='lg:w-1/2 w-full'>
+            <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Follow Us</h2>
+            <div className="list-none mb-10">
               <li>
-                <a className="text-bcg-light-gray hover:text-blue-third">Facebook</a>
+                <a className="text-light-gray hover:text-blue-third">LinkedIn</a>
               </li>
               <li>
-                <a className="text-bcg-light-gray hover:text-blue-third">Twitter</a>
+                <a className="text-light-gray hover:text-blue-third">Instagram</a>
               </li>
               <li>
-                <a className="text-bcg-light-gray hover:text-blue-third">Google Plus</a>
+                <a className="text-light-gray hover:text-blue-third">X</a>
               </li>
-            </nav>
+              <li>
+                <a className="text-light-gray hover:text-blue-third">Medium</a>
+              </li>
+            </div>
           </div>
         </div>
       </div>
-      <div className="bg-custom-gray-dark">
-        <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-white text-sm text-center sm:text-left">© 2023 Group-Website</p>
+      <div className="w-3/4 bg-bcg-light-gray border-t-[1px] border-light-gray border-opacity-50">
+        <div className="w-full py-4 flex flex-wrap flex-col sm:flex-row">
+          <p className="text-light-gray font-inter  text-sm text-center sm:text-left">© 2024 Bohesa. All rights reserved.</p>
+          {/* 
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <a className="text-white">
+            <a className="text-light-gray">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M18.36 6.64a9 9 0 11-12.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>
             </a>
-            <a className="ml-3 text-white">
+            <a className="ml-3 text-light-gray">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M7.88 6.64a9 9 0 0112.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>
             </a>
-            <a className="ml-3 text-white">
+            <a className="ml-3 text-light-gray">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M7.88 6.64a9 9 0 0112.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>
             </a>
-            <a className="ml-3 text-white">
+            <a className="ml-3 text-light-gray">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M7.88 6.64a9 9 0 0112.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>
             </a>
-            <a className="ml-3 text-white">
+            <a className="ml-3 text-light-gray">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M7.88 6.64a9 9 0 0112.72 0M15 3v4.8a1.2 1.2 0 01-2.4 0V3m3.6 7.2h-3.6a1.2 1.2 0 000 2.4h3.6a1.2 1.2 0 000-2.4z"></path>
               </svg>
             </a>
           </span>
+           */ }
         </div>
       </div>
     </footer>
