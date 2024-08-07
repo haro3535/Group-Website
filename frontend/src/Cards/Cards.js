@@ -74,33 +74,33 @@ const Card = ({ title, content, icon }) => {
 };
 
 const CardsGrid = () => (
-  <div id="solutions" className="container mx-auto px-4 py-8 bg-white">
-    <div className="flex flex-col items-center mb-6">
-      <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>
+  <div id="solutions" className="w-full flex flex-col items-center justify-center py-8 bg-white">
+    <div className="w-3/4 flex flex-col items-center justify-center mb-6">
+      <h2 className="text-xl text-center font-semibold inter-font mb-3 " style={{ color: 'var(--custom-gray)' }}>
         Empowering businesses through innovative technology
       </h2>
-      <h1 className="text-base font-normal inter-font" style={{ color: 'var(--light-gray)' }}>
+      <h1 className="text-center font-normal inter-font" style={{ color: 'var(--light-gray)' }}>
         Ready to take your business to the next level? Our mission is to provide top-notch software solutions suitable for your business.
       </h1>
     </div>
 
     
-    <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6 2xl:gap-0 w-3/4">
       {cards.slice(0, 4).map((card, index) => (
-        <div key={card.id} className="col-span-1">
+        <div key={card.id} className="col-span-1 flex justify-center items-center">
           <Card title={card.title} content={card.content} icon={icons[index]} />
         </div>
       ))}
     </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-8">
-      <div className="col-span-1 sm:col-span-2 xl:col-span-1"></div>
+    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6 2xl:gap-0 sm:mt-8 w-3/4">
+      <div className="hidden 2xl:block"></div>
       {cards.slice(4, 6).map((card, index) => (
-        <div key={card.id} className="col-span-1">
+        <div key={card.id} className="col-span-1 flex justify-center items-center">
           <Card title={card.title} content={card.content} icon={icons[index + 4]} />
         </div>
       ))}
-      <div className="col-span-1 sm:col-span-2 xl:col-span-1"></div>
+      <div className="hidden lg:block"></div>
     </div>
   </div>
 );
