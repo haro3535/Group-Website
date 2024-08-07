@@ -34,9 +34,11 @@ const slides = [
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    setIsTransitioning(true);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % (slides.length + 1));
   };
 
   useEffect(() => {
@@ -44,14 +46,26 @@ const Carousel = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleTransitionEnd = () => {
+    if (currentIndex === slides.length) {
+      setIsTransitioning(false);
+      setCurrentIndex(0);
+    }
+  };
+
   const goToSlide = (index) => {
+    setIsTransitioning(true);
     setCurrentIndex(index);
   };
 
   return (
-    <div className="carousel-container mt-20"> {/* Adjust margin-top based on your navbar height */}
+    <div className="carousel-container mt-20">
       <div className="overflow-hidden relative">
-        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        <div
+          className={`flex transition-transform duration-1000 ease-in-out ${isTransitioning ? '' : 'transition-none'}`}
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          onTransitionEnd={handleTransitionEnd}
+        >
           {slides.map((slide, index) => (
             <div key={index} className="min-w-full flex items-center justify-center bg-bcg-light-gray">
               <div className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} text-center p-8`}>
@@ -63,6 +77,16 @@ const Carousel = () => {
               </div>
             </div>
           ))}
+          {/* Duplicate first slide for seamless transition */}
+          <div className="min-w-full flex items-center justify-center bg-bcg-light-gray">
+            <div className="flex flex-col md:flex-row md:flex-row-reverse text-center p-8">
+              <img src={slides[0].src} alt={`Slide ${slides.length + 1}`} className="w-full md:w-1/2 mx-auto mb-4 md:mb-0 max-h-300" />
+              <div className="w-full md:w-1/2 md:text-left">
+                <p className="text-4xl font-inter font-semibold text-custom-gray">{slides[0].text}</p>
+                <p className="text-sm mt-2 font-inter italic text-light-gray">{slides[0].subText}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="dots-container space-x-2 mt-4">
