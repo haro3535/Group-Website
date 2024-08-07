@@ -46,8 +46,8 @@ const NavBar = () => {
             </a>
             <div className="lg:flex hidden">
               <ul className="flex space-x-5 cursor-pointer font-inter text-light-gray">
-                <li><a href="#services" onClick={() => scrollToSection('services')} className={activeSection === 'services' ? ' font-bold ' : ''}>Services</a></li>
-                <li><a href="#solutions" onClick={() => scrollToSection('solutions')} className={activeSection === 'solutions' ? 'font-bold ' : ''}>Solutions</a></li>
+                <li><a href="#services" onClick={() => scrollToSection('services')} className={activeSection === 'services' ? ' font-bold text-blue-third' : ''}>Services</a></li>
+                <li><a href="#solutions" onClick={() => scrollToSection('solutions')} className={activeSection === 'solutions' ? 'font-bold text-blue-third ' : ''}>Solutions</a></li>
                 <li><a href="#community" onClick={() => scrollToSection('community')} className={activeSection === 'community' ? 'font-bold text-blue-third' : ''}>Community</a></li>
                 <li><a href="#about" onClick={() => scrollToSection('about')} className={activeSection === 'about' ? 'font-bold text-blue-third' : ''}>About</a></li>
                 <li><a href="#contact" onClick={() => scrollToSection('contact')} className={activeSection === 'contact' ? 'font-bold text-blue-third' : ''}>Contact</a></li>
