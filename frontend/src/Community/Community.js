@@ -42,7 +42,7 @@ const CardsGrid = () => (
   <div className="mx-auto px-4 py-8 bg-bcg-light-gray">
     <div className="flex flex-col items-center mb-12">
       <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Our Community</h2>
-      <h1 className="text-sm font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Who is Bohesa suitable for?</h1>
+      <h1 className="text-base font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Who is Bohesa suitable for?</h1>
     </div>
     
     <div className="flex justify-center">

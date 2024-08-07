@@ -79,7 +79,7 @@ const CardsGrid = () => (
       <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>
         Empowering businesses through innovative technology
       </h2>
-      <h1 className="text-sm font-normal inter-font" style={{ color: 'var(--light-gray)' }}>
+      <h1 className="text-base font-normal inter-font" style={{ color: 'var(--light-gray)' }}>
         Ready to take your business to the next level? Our mission is to provide top-notch software solutions suitable for your business.
       </h1>
     </div>
