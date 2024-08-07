@@ -60,7 +60,7 @@ const services = [
 export default function Services() {
   return (
     <div id="services" className="flex justify-center items-center py-10 bg-white">
-      <div className="flex flex-col items-center w-full max-w-screen-xl px-4">
+      <div className="w-3/4 flex flex-col items-center">
         {/* Header */}
         <div className="flex flex-col items-center mb-6">
           <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Our Services</h2>
@@ -68,15 +68,15 @@ export default function Services() {
         </div>
 
         {/* Service icons */}
-        <div className="flex justify-between items-center w-full">
+        <div className="grid xl:grid-cols-5 md:grid-cols-3 gap-y-8 ld:gap-y-0 sm:grid-cols-2 grid-cols-1 w-full">
           {services.map((service, index) => (
             <React.Fragment key={index}>
-              <div className="text-center relative group">
-                <div className="icon-container">
+              <div className="text-center flex flex-col justify-center items-center w-full">
+                <div className="icon-container flex justify-center items-center w-full">
                   <svg className="circle-svg" viewBox="0 0 104 104">
                     <circle className="circle" cx="52" cy="52" r="50"></circle>
                   </svg>
-                  <div className="icon-background">
+                  <div className="icon-background flex justify-center items-center w-full">
                     <span className="text-custom-gray">{service.icon}</span>
                   </div>
                 </div>
