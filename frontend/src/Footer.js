@@ -28,14 +28,15 @@ const Footer = () => {
   };
   
   return (
-    <footer className="bg-bcg-light-gray body-font flex flex-col items-center">
+    <footer id="contact" className="bg-bcg-light-gray body-font flex flex-col items-center">
       <div className="w-3/4 grid lg:grid-cols-4 grid-cols-1 py-10 space-y-5 lg:space-y-0">
         <div className="w-full mb-5">
           <a href='/' className="text-4xl font-bold font-inter text-blue-second">
             Bohesa
           </a>
           <p className="mt-2 text-sm text-light-gray">
-            We prioritize customer satisfaction by developing websites and software applications equipped with the latest technologies...
+          We prioritize customer satisfaction by developing websites
+          and software applications equipped with the latest technologies, ensuring the best quality in everything we create and will create.
           </p>
         </div>
         <div className="w-full flex justify-end">
@@ -43,7 +44,7 @@ const Footer = () => {
             <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Company</h2>
             <div className="list-none mb-10">
               <li>
-              <button onClick={() => handleScrollToSection('aboutPart')} className="text-light-gray hover:text-blue-third">About Us</button>
+              <button onClick={() => handleScrollToSection('about')} className="text-light-gray hover:text-blue-third">About Us</button>
               </li>
               <li>
                 <a href='/' className="text-light-gray hover:text-blue-third">Testimonials</a>
@@ -59,7 +60,7 @@ const Footer = () => {
             <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Useful Links</h2>
             <div className="list-none mb-10">
               <li>
-                <a className="text-light-gray hover:text-blue-third">Our services</a>
+                <button onClick={() => handleScrollToSection('services')} className="text-light-gray hover:text-blue-third">Our services</button>
               </li>
               <li>
                 <button onClick={() => handleScrollToSection('peoplePart')} className="text-light-gray hover:text-blue-third">People</button>
@@ -91,8 +92,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-3/4 bg-bcg-light-gray border-t-[1px] border-light-gray border-opacity-50">
-        <div className="w-full py-4 flex flex-wrap flex-col sm:flex-row">
+        <div className="w-full py-4 flex flex-wrap flex-col sm:flex-row sm:justify-between">
           <p className="text-light-gray font-inter  text-sm text-center sm:text-left">© 2024 Bohesa. All rights reserved.</p>
+          <p className="text-light-gray font-inter  text-sm text-center sm:text-left">contact@bohesa.com</p>
           {/* 
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <a className="text-light-gray">

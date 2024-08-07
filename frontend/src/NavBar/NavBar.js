@@ -2,11 +2,27 @@ import React, { useEffect, useState } from 'react';
 import { ToggleButtonOnClicked, CloseToggleMenu } from '../utils/NavBarScripts.js';
 import LanguageButton from './LanguageButton.js';
 
-const scrollToSection = (sectionId) => {
-  document.getElementById(sectionId).scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
+const handleScrollToSection = (sectionId) => {
+  const sectionElement = document.getElementById(sectionId);
+  if (sectionElement) {
+    // Scroll to the element first
+    sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    // Adjust scroll position to center the element
+    window.setTimeout(() => {
+      const elementRect = sectionElement.getBoundingClientRect();
+      const elementTop = elementRect.top;
+      const elementHeight = elementRect.height;
+      const viewportHeight = window.innerHeight;
+
+      // Calculate the amount to scroll to center the element
+      const scrollOffset = elementTop - (viewportHeight / 2) + (elementHeight / 2);
+      window.scrollTo({
+        top: window.pageYOffset + scrollOffset,
+        behavior: 'smooth'
+      });
+    }, 0); // Delay to allow initial scroll
+  }
 };
 
 const NavBar = () => {
@@ -15,6 +31,12 @@ const NavBar = () => {
   const handleScroll = () => {
     const sections = ['services', 'solutions', 'community', 'about', 'contact'];
     const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+    // Check if the user has scrolled to the bottom of the page
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      setActiveSection('contact');
+      return;
+    }
 
     for (let section of sections) {
       const element = document.getElementById(section);
@@ -46,11 +68,11 @@ const NavBar = () => {
             </a>
             <div className="lg:flex hidden">
               <ul className="flex space-x-5 cursor-pointer font-inter text-light-gray">
-                <li><a href="#services" onClick={() => scrollToSection('services')} className={activeSection === 'services' ? ' font-bold text-blue-third' : ''}>Services</a></li>
-                <li><a href="#solutions" onClick={() => scrollToSection('solutions')} className={activeSection === 'solutions' ? 'font-bold text-blue-third ' : ''}>Solutions</a></li>
-                <li><a href="#community" onClick={() => scrollToSection('community')} className={activeSection === 'community' ? 'font-bold text-blue-third' : ''}>Community</a></li>
-                <li><a href="#about" onClick={() => scrollToSection('about')} className={activeSection === 'about' ? 'font-bold text-blue-third' : ''}>About</a></li>
-                <li><a href="#contact" onClick={() => scrollToSection('contact')} className={activeSection === 'contact' ? 'font-bold text-blue-third' : ''}>Contact</a></li>
+                <li><button onClick={() => handleScrollToSection('services')} className={activeSection === 'services' ? ' font-bold text-blue-third' : ''}>Services</button></li>
+                <li><button onClick={() => handleScrollToSection('solutions')} className={activeSection === 'solutions' ? 'font-bold text-blue-third ' : ''}>Solutions</button></li>
+                <li><button onClick={() => handleScrollToSection('community')} className={activeSection === 'community' ? 'font-bold text-blue-third' : ''}>Community</button></li>
+                <li><button onClick={() => handleScrollToSection('about')} className={activeSection === 'about' ? 'font-bold text-blue-third' : ''}>About</button></li>
+                <li><button onClick={() => handleScrollToSection('contact')} className={activeSection === 'contact' ? 'font-bold text-blue-third' : ''}>Contact</button></li>
               </ul>
             </div>
             <div className='hidden lg:block'>
