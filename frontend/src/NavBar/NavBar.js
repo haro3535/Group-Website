@@ -17,10 +17,17 @@ const handleScrollToSection = (sectionId) => {
 
       // Calculate the amount to scroll to center the element
       const scrollOffset = elementTop - (viewportHeight / 2) + (elementHeight / 2);
-      window.scrollTo({
-        top: window.pageYOffset + scrollOffset,
-        behavior: 'smooth'
-      });
+      if(sectionId = 'about'){
+        window.scrollTo({
+          top: window.pageYOffset + scrollOffset - 100,
+          behavior: 'smooth'
+        });
+      }else{
+        window.scrollTo({
+          top: window.pageYOffset + scrollOffset,
+          behavior: 'smooth'
+        });
+      }
     }, 0); // Delay to allow initial scroll
   }
 };

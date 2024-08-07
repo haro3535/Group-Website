@@ -47,7 +47,7 @@ const Footer = () => {
               <button onClick={() => handleScrollToSection('about')} className="text-light-gray hover:text-blue-third">About Us</button>
               </li>
               <li>
-                <a href='/' className="text-light-gray hover:text-blue-third">Testimonials</a>
+                <button className="text-light-gray hover:text-blue-third">Testimonials</button>
               </li>
               <li>
                 {/*<a className="text-light-gray hover:text-blue-third">FAQ's</a> */}
@@ -66,7 +66,7 @@ const Footer = () => {
                 <button onClick={() => handleScrollToSection('peoplePart')} className="text-light-gray hover:text-blue-third">People</button>
               </li>
               <li>
-                <a className="text-light-gray hover:text-blue-third">Client</a>
+                <button className="text-light-gray hover:text-blue-third">Client</button>
               </li>
             </div>
           </div>
@@ -76,16 +76,16 @@ const Footer = () => {
             <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Follow Us</h2>
             <div className="list-none mb-10">
               <li>
-                <a className="text-light-gray hover:text-blue-third">LinkedIn</a>
+                <button className="text-light-gray hover:text-blue-third">LinkedIn</button>
               </li>
               <li>
-                <a className="text-light-gray hover:text-blue-third">Instagram</a>
+                <button className="text-light-gray hover:text-blue-third">Instagram</button>
               </li>
               <li>
-                <a className="text-light-gray hover:text-blue-third">X</a>
+                <button className="text-light-gray hover:text-blue-third">X</button>
               </li>
               <li>
-                <a className="text-light-gray hover:text-blue-third">Medium</a>
+                <button className="text-light-gray hover:text-blue-third">Medium</button>
               </li>
             </div>
           </div>
@@ -94,7 +94,8 @@ const Footer = () => {
       <div className="w-3/4 bg-bcg-light-gray border-t-[1px] border-light-gray border-opacity-50">
         <div className="w-full py-4 flex flex-wrap flex-col sm:flex-row sm:justify-between">
           <p className="text-light-gray font-inter  text-sm text-center sm:text-left">© 2024 Bohesa. All rights reserved.</p>
-          <p className="text-light-gray font-inter  text-sm text-center sm:text-left">contact@bohesa.com</p>
+          {/*<p className="text-light-gray font-inter  text-sm text-center sm:text-left">contact@bohesa.com</p>*/}
+
           {/* 
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
             <a className="text-light-gray">
