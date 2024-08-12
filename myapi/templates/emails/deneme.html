@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+        }
+        .email-header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        .email-body {
+            font-size: 16px;
+            color: #555555;
+        }
+        .email-body p {
+            margin: 10px 0;
+        }
+        .email-footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            New Contact Form Submission
+        </div>
+        <div class="email-body">
+            <p><strong>Full Name:</strong> {{fullName}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Company Name:</strong> {{companyName}}</p>
+            <p><strong>Subject:</strong> {{subject}}</p>
+            <p><strong>Message:</strong></p>
+            <p>{{message}}</p>
+        </div>
+        <div class="email-footer">
+            <p>This email was generated from a contact form submission.</p>
+        </div>
+    </div>
+</body>
+</html>
