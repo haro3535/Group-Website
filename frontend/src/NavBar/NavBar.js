@@ -17,7 +17,7 @@ const handleScrollToSection = (sectionId) => {
 
       // Calculate the amount to scroll to center the element
       const scrollOffset = elementTop - (viewportHeight / 2) + (elementHeight / 2);
-      if(sectionId == 'about'){
+      if(sectionId === 'about'){
         window.scrollTo({
           top: window.pageYOffset + scrollOffset - 100,
           behavior: 'smooth'
@@ -83,7 +83,7 @@ const NavBar = () => {
               </ul>
             </div>
             <div className='hidden lg:block'>
-              <LanguageButton />
+              {/* <LanguageButton /> */}
             </div>
             <svg className="block cursor-pointer hover:text-gray-500 lg:hidden w-6 h-6" onClick={ToggleButtonOnClicked} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>

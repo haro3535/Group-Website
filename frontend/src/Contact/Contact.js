@@ -44,8 +44,8 @@ export default function Contact() {
     }
 
     return (
-        <section className="w-full flex flex-col justify-center items-center space-y-6">
-            <h1 className="text-2xl">Contact Us</h1>
+        <section className="w-full flex flex-col justify-center items-center space-y-6 py-8">
+            <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Contact Us</h2>
             <div className="w-3/4 grid lg:grid-cols-2 grid-cols-1">
                 <div className="">Image</div>
                 <div className="bg-white border-2 rounded-2xl py-8 px-10">

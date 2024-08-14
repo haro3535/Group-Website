@@ -34,7 +34,7 @@ def send_contact_mail(request):
         })
 
         try:
-            print('I am here')
+            
             email = EmailMessage(
                 subject,
                 html_content,
@@ -43,7 +43,6 @@ def send_contact_mail(request):
             )
             email.content_subtype = "html"  # Set the email content as HTML
             email.send()
-            print('Am I sending')
             return JsonResponse({'status': 'success'}, status=200)
         except Exception as e:
             return JsonResponse({'status': 'error', 'message': str(e)}, status=500)

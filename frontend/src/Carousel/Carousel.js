@@ -35,6 +35,7 @@ const slides = [
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [isHovering, setIsHovering] = useState(false);
 
   const nextSlide = () => {
     setIsTransitioning(true);
@@ -42,9 +43,13 @@ const Carousel = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
+    const interval = setInterval(() => {
+      if(!isHovering){
+        nextSlide();
+      }
+    }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovering]);
 
   const handleTransitionEnd = () => {
     if (currentIndex === slides.length) {
@@ -58,8 +63,11 @@ const Carousel = () => {
     setCurrentIndex(index);
   };
 
+  const handleMouseEnter = () => setIsHovering(true);
+  const handleMouseLeave = () => setIsHovering(false);
+
   return (
-    <div className="carousel-container mt-20">
+    <div className="carousel-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="overflow-hidden relative">
         <div
           className={`flex transition-transform duration-1000 ease-in-out ${isTransitioning ? '' : 'transition-none'}`}
@@ -79,7 +87,7 @@ const Carousel = () => {
           ))}
           {/* Duplicate first slide for seamless transition */}
           <div className="min-w-full flex items-center justify-center bg-bcg-light-gray">
-            <div className="flex flex-col md:flex-row md:flex-row-reverse text-center p-8">
+            <div className="flex flex-col  md:flex-row-reverse text-center p-8">
               <img src={slides[0].src} alt={`Slide ${slides.length + 1}`} className="w-full md:w-1/2 mx-auto mb-4 md:mb-0 max-h-300" />
               <div className="w-full md:w-1/2 md:text-left">
                 <p className="text-4xl font-inter font-semibold text-custom-gray">{slides[0].text}</p>

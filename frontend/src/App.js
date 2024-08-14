@@ -13,10 +13,10 @@ function App() {
   return (
     <Router>
       <NavBar />
+      <div className='w-full h-[12vh]'></div>
       <Routes>
         <Route path="/" element={
           <>
-            <NavBar />
             <Carousel />
             <Services />
             <Cards />
