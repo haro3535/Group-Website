@@ -12,9 +12,11 @@ const sendEmail = async (formdata) => {
 
         const result = await response.json();
         if (result.status === 'success'){
-            console.log('Email sent successfully');
+            alert("Message Sent Successfully");
+            window.location.reload();
+
         } else {
-            console.log('Error mail sending: ', result.message);
+            alert('Error mail sending: ', result.message);
         }
     }
     catch (error) {
@@ -44,11 +46,11 @@ export default function Contact() {
     }
 
     return (
-        <section className="w-full flex flex-col justify-center items-center space-y-6 py-8">
-            <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Contact Us</h2>
+        <section id="contact" className="w-full flex flex-col justify-center items-center space-y-6 py-8">
+            <h2 className="text-xl font-semibold inter-font mt-12" style={{ color: 'var(--custom-gray)' }}>Contact Us</h2>
             <div className="w-3/4 grid lg:grid-cols-2 grid-cols-1">
                 <div className="">Image</div>
-                <div className="bg-white border-2 rounded-2xl py-8 px-10">
+                <div className="bg-white border-2 rounded-2xl py-4 px-10">
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <div className="space-y-2">
                             <label className="block text-sm">Full Name</label>
@@ -105,6 +107,7 @@ export default function Contact() {
                                 value={formData.message}
                                 onChange={handleChange}
                                 required
+                                style={{resize: "none"}}
                             />
                         </div>
                         <button type="submit" className="bg-blue-second py-2 px-3 rounded-md text-white hover:bg-opacity-85">Send message</button>
