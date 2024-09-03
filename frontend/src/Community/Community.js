@@ -26,7 +26,7 @@ const icon3 = (
 );
 
 const Card = ({ title, content, icon }) => (
-    <div id="community" className="card-community bg-white rounded-md shadow-md p-6 text-center">
+    <div className="card-community bg-white rounded-md shadow-md px-6 py-12 text-center">
       <div className="flex items-center justify-center mb-4">
         <div className="icon-container-community">
           {icon}
@@ -39,14 +39,14 @@ const Card = ({ title, content, icon }) => (
 );
 
 const CardsGrid = () => (
-  <div className="mx-auto px-4 py-8 bg-bcg-light-gray">
+  <div className="w-3/4 flex flex-col space-y-6 justify-center items-center py-10">
     <div className="flex flex-col items-center mb-12">
       <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Our Community</h2>
       <h1 className="text-base font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Who is Bohesa suitable for?</h1>
     </div>
     
     <div className="flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 ">
         {cards.map((card, index) => (
           <Card key={card.id} title={card.title} content={card.content} icon={[icon1, icon2, icon3][index]} />
         ))}
@@ -57,8 +57,8 @@ const CardsGrid = () => (
 
 export default function Cards() {
   return (
-    <div>
+    <section id='community' className='flex justify-center bg-bcg-light-gray'>
       <CardsGrid />
-    </div>
+    </section>
   );
 }

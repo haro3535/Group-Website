@@ -119,15 +119,13 @@
 }
 .card-community {
   background-color: var(white); /* Use CSS variable or directly specify the color */
-  padding: 16px; /* Adjust padding as needed */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
   border-radius: 8px; /* Adjust border radius as needed */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 350px;
   align-items: center;
-  height: 250px; /* Adjust height as needed */
-  width: 250px; /* Adjust width as needed */
   position: relative;
   text-align: center; /* Center text horizontally */
 }

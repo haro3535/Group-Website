@@ -16,7 +16,6 @@ export function CloseToggleMenu(){
 
 */
 window.onscroll = function() {
-  CloseLanguageMenu()
   CloseToggleMenu()
   ScrollFunction()
 };
@@ -69,12 +68,6 @@ export function LanguageButtonOnClicked() {
   }
 }
 
-export function CloseLanguageMenu() {
-  const toggleMenu = document.getElementById('language-menu');
-  if (!toggleMenu.classList.contains('hidden')) {
-    toggleMenu.classList.add('hidden');
-  }
-}
 
 
 

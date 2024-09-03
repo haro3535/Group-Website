@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { ToggleButtonOnClicked, CloseToggleMenu } from '../utils/NavBarScripts.js';
-import LanguageButton from './LanguageButton.js';
 
 const handleScrollToSection = (sectionId) => {
   const sectionElement = document.getElementById(sectionId);
@@ -93,12 +92,12 @@ const NavBar = () => {
         <div id='toggle-menu' className="w-full lg:hidden bg-white fixed hidden justify-center border-y-[1px] border-gray-300 transition-[max-height] duration-500 ease-in-out overflow-hidden h-0">
           <div className='w-full flex flex-col items-center'>
             <ul className="cursor-pointer relative w-3/4">
-              <li className="py-2" onClick={CloseToggleMenu}>Services</li>
-              <li className="py-2" onClick={CloseToggleMenu}>Solutions</li>
-              <li className="py-2" onClick={CloseToggleMenu}>Community</li>
-              <li className="py-2" onClick={CloseToggleMenu}>About</li>
-              <li className="py-2" onClick={CloseToggleMenu}>Contact</li>
-              <li className="py-2"><LanguageButton className="z-10" /></li>
+              <li><button onClick={() => {handleScrollToSection('services'); }} className={(activeSection === 'services' ? ' text-blue-third py-2' : 'py-2' )}>Services</button></li>
+                <li><button onClick={() => {handleScrollToSection('solutions'); }} className={activeSection === 'solutions' ? ' text-blue-third py-2' : 'py-2'}>Solutions</button></li>
+                <li><button onClick={() => {handleScrollToSection('community'); }} className={activeSection === 'community' ? ' text-blue-third py-2' : 'py-2'}>Community</button></li>
+                <li><button onClick={() => {handleScrollToSection('about'); }} className={activeSection === 'about' ? ' text-blue-third py-2' : 'py-2'}>About</button></li>
+                <li onClick={() => {handleScrollToSection('contact'); }} className={activeSection === 'contact' ? ' text-blue-third py-2' : 'py-2'}>Contact</li>
+              {/*<li className="py-2"><LanguageButton className="z-10" /></li> */}
             </ul>
           </div>
         </div>
