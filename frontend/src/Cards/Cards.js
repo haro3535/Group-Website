@@ -56,17 +56,19 @@ const Card = ({ title, content, icon }) => {
 
   return (
     <div
-      className="card"
+      className="card space-y-10 px-6 py-4"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div className="icon-background-cards text-custom-gray">
         {icon}
       </div>
-      <div className="card-title-container">
-        <h2 className={`text-xl font-semibold mb-4 ${isHovered ? 'text-blue-second' : 'text-blue-second'}`}>
+      <div className='w-full py-4 relative 2xl:h-16 h-8 '>
+        <h2 className={`text-xl font-semibold absolute w-full top-0 mx-auto h-full my-full  ${isHovered ? 'text-blue-second' : 'text-blue-second'}`}>
           <span className={`font-bold leading-none transition-all duration-300 ${isHovered ? 'text-3xl' : 'text-xl'}`}>{title.charAt(0)}</span>{title.slice(1)}
         </h2>
+      </div>
+      <div className="w-full text-start">
         <p className="text-light-gray">{content}</p>
       </div>
     </div>
@@ -93,7 +95,7 @@ const CardsGrid = () => (
       ))}
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6 2xl:gap-0 sm:mt-8 w-3/4">
+    <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6 2xl:gap-0 mt-6 w-3/4">
       <div className="hidden 2xl:block"></div>
       {cards.slice(4, 6).map((card, index) => (
         <div key={card.id} className="col-span-1 flex justify-center items-center">

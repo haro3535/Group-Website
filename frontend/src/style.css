@@ -76,35 +76,26 @@
 .card {
   background-color: var(--bcg-light-gray);
   margin: 25px;
-  padding: 25px; /* Adjust padding to provide space for the icon */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  min-height: 300px;
   height: 100%;
-  width: 300px;
+  width: auto;
   position: relative;
   text-align: center;
 }
 .icon-background-cards {
   width: 50px;
-  height: 50px;
+  height: 20px;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;/* Space between the icon and the title */
+  margin-top: 2rem;/* Space between the icon and the title */
   border-radius: 50%;
   position: relative;
-}
-.card-title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px; /* Space between the icon and the title */
 }
 .grid-container {
   display: flex;
@@ -114,7 +105,7 @@
 }
 
 .grid-item {
-  flex: 1 1 300px;
+  flex: 1 1 auto;
   max-width: 300px;
 }
 .card-community {
