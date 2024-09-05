@@ -63,13 +63,13 @@ const Card = ({ title, content, icon }) => {
       <div className="icon-background-cards text-custom-gray">
         {icon}
       </div>
-      <div className='w-full py-4 relative 2xl:h-16 h-8 '>
-        <h2 className={`text-xl font-semibold absolute w-full top-0 mx-auto h-full my-full  ${isHovered ? 'text-blue-second' : 'text-blue-second'}`}>
+      <div className='w-full py-4 relative 2xl:h-16 h-14'>
+        <h2 className={`text-xl font-semibold absolute w-full top-0 mx-auto h-full  sm:mt-0  ${isHovered ? 'text-blue-second' : 'text-blue-second'}`}>
           <span className={`font-bold leading-none transition-all duration-300 ${isHovered ? 'text-3xl' : 'text-xl'}`}>{title.charAt(0)}</span>{title.slice(1)}
         </h2>
       </div>
       <div className="w-full text-start">
-        <p className="text-light-gray">{content}</p>
+        <p className="text-light-gray mt-[-0.25rem]">{content}</p>
       </div>
     </div>
   );
