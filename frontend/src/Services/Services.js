@@ -5,7 +5,7 @@ import '../style.css';
 const services = [
   {
     title: (
-      <span className="inter-font">Custom Software Development</span>
+      <span className="inter-font">AI & AI Entegrations</span>
     ),
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="w-12 h-12">
@@ -37,7 +37,7 @@ const services = [
   },
   {
     title: (
-      <span className="inter-font">Cloud Solutions</span>
+      <span className="inter-font">Outsourcing</span>
     ),
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="w-12 h-12">

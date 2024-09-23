@@ -87,7 +87,7 @@ const Carousel = () => {
           ))}
           {/* Duplicate first slide for seamless transition */}
           <div className="min-w-full flex items-center justify-center bg-bcg-light-gray">
-            <div className="flex flex-col  md:flex-row-reverse text-center p-8">
+            <div className={`flex flex-col md:flex-row ${slides.length % 2 === 0 ? 'md:flex-row-reverse' : ''} text-center p-8`}>
               <img src={slides[0].src} alt={`Slide ${slides.length + 1}`} className="w-full md:w-1/2 mx-auto mb-4 md:mb-0 max-h-300" />
               <div className="w-full md:w-1/2 md:text-left">
                 <p className="text-4xl font-inter font-semibold text-custom-gray">{slides[0].text}</p>
