@@ -49,7 +49,10 @@ export default function Contact() {
         <section id="contact" className="w-full flex flex-col justify-center items-center space-y-6 py-8">
             <h2 className="text-xl font-semibold inter-font mt-12" style={{ color: 'var(--custom-gray)' }}>Contact Us</h2>
             <div className="w-3/4 grid lg:grid-cols-2 grid-cols-1">
-                <div className="">Image</div>
+                <div className="relative">
+                <img src='deneme2.jpg' className='w-3/4 absolute object-contain -z-10'  alt=''/>
+                </div>
+                
                 <div className="bg-white border-2 rounded-2xl py-4 px-10">
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <div className="space-y-2">
