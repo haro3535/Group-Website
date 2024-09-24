@@ -39,10 +39,10 @@ const Card = ({ title, content, icon }) => (
 );
 
 const CardsGrid = () => (
-  <div className="w-3/4 flex flex-col space-y-6 justify-center items-center py-10">
-    <div className="flex flex-col items-center mb-12">
-      <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Our Community</h2>
-      <h1 className="text-base font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Who is Bohesa suitable for?</h1>
+  <div className="w-3/4 flex flex-col space-y-6 justify-center items-center py-12 mb-10" >
+    <div className="flex flex-col space-y-3 items-center mb-12">
+      <h2 className="text-4xl font-semibold inter-font text-white" >Our Community</h2>
+      <h1 className="text-lg font-semibold inter-font text-white" >Who is Bohesa suitable for?</h1>
     </div>
     
     <div className="flex justify-center">
@@ -57,7 +57,8 @@ const CardsGrid = () => (
 
 export default function Cards() {
   return (
-    <section id='community' className='flex justify-center bg-bcg-light-gray'>
+    <section id='community' className='flex relative overflow-hidden justify-center '>
+      <img src='banner2.jpg' className='w-full absolute object-fit -z-10'  alt=''/>
       <CardsGrid />
     </section>
   );

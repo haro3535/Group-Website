@@ -35,7 +35,6 @@ const slides = [
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
-  const [isHovering, setIsHovering] = useState(false);
 
   const nextSlide = () => {
     setIsTransitioning(true);
@@ -44,12 +43,10 @@ const Carousel = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if(!isHovering){
-        nextSlide();
-      }
+      nextSlide();
     }, 5000);
     return () => clearInterval(interval);
-  }, [isHovering]);
+  },[]);
 
   const handleTransitionEnd = () => {
     if (currentIndex === slides.length) {
@@ -63,11 +60,8 @@ const Carousel = () => {
     setCurrentIndex(index);
   };
 
-  const handleMouseEnter = () => setIsHovering(true);
-  const handleMouseLeave = () => setIsHovering(false);
-
   return (
-    <div className="carousel-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div className="carousel-container">
       <div className="overflow-hidden relative">
         <div
           className={`flex transition-transform duration-1000 ease-in-out ${isTransitioning ? '' : 'transition-none'}`}
