@@ -57,8 +57,8 @@ const CardsGrid = () => (
 
 export default function Cards() {
   return (
-    <section id='community' className='flex relative overflow-hidden justify-center '>
-      <img src='banner2.jpg' className='w-full absolute object-fit -z-10'  alt=''/>
+    <section id='community' className='flex relative justify-center h-auto'>
+      <img src='banner2.jpg' className='w-full h-full absolute object-cover -z-10'  alt=''/>
       <CardsGrid />
     </section>
   );

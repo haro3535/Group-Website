@@ -58,7 +58,7 @@ export default function Contact() {
                                 type="text" 
                                 name="fullName" 
                                 className="w-full py-2 px-3 border-2 rounded-md" 
-                                placeholder="Harun Onur" 
+                                placeholder="John Doe" 
                                 value={formData.fullName}
                                 onChange={handleChange}
                                 required 
@@ -70,7 +70,7 @@ export default function Contact() {
                                 type="email" 
                                 name="email" 
                                 className="w-full py-2 px-3 border-2 rounded-md" 
-                                placeholder="harunonur@example.com"
+                                placeholder="johndoe@example.com"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required 
