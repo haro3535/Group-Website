@@ -14,11 +14,14 @@ export default function About() {
                 </div>
                 {/* Text */}
                 <div className="md:w-1/2 md:text-left px-4">
-                    <div className="mb-6 space-y-3 md:space-y-0">
+                    <div className="mb-6 space-y-3 ">
                         <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Who Are We?</h2>
                         <h1 className="text-m font-normal inter-font" style={{ color: 'var(--light-gray)' }}>
                             We are a team of passionate developers dedicated to providing top-notch software solutions. We envision a world where every business can leverage technology to achieve their goals.
                         </h1>
+                        <a href='/about-bohesa' className='w-fit block'>
+                            <div className="bg-blue-second py-2 px-3 rounded-md text-white hover:bg-opacity-85">Learn more</div>
+                        </a>
                     </div>
                 </div>
             </div>
