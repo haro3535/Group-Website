@@ -85,7 +85,7 @@ export default function Contact() {
                                 type="text" 
                                 name="companyName" 
                                 className="w-full py-2 px-3 border-2 rounded-md" 
-                                placeholder="bohesa" 
+                                placeholder="BOHESA" 
                                 value={formData.companyName}
                                 onChange={handleChange}
                             />
