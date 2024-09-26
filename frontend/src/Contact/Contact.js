@@ -48,11 +48,11 @@ export default function Contact() {
     return (
         <section id="contact" className="w-full flex flex-col justify-center items-center pt-8">
             <div className="w-3/4 grid lg:grid-cols-2 grid-cols-1 space-y-2">
-                <div className="flex justify-center items-center md:items-end md:justify-start overflow-hidden">
-                    <img src='deneme2.jpg' className='w-3/4 -mb-10 md:bottom-0'  alt=''/>
+                <div className="flex justify-center items-center overflow-hidden">
+                    <img src='deneme2.jpg' className='w-3/4  -mb-10 md:bottom-0'  alt=''/>
                 </div>
                 
-                <div className="w-3/4 mx-auto md:mx-0 bg-white py-4 px-4">
+                <div className="w-full lg:w-3/4 mx-auto lg:mx-0 bg-white py-4 px-4">
                     <h2 className="text-2xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Contact Us</h2>
                     <form className="space-y-4 my-6" onSubmit={handleSubmit}>
                         <div className="space-y-2">

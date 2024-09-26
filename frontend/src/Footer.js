@@ -45,7 +45,7 @@ const Footer = () => {
             <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Company</h2>
             <div className="list-none mb-10">
               <li>
-              <button onClick={() => handleScrollToSection('about')} className="text-light-gray hover:text-blue-third">About Us</button>
+              <a href='/about-bohesa' className="text-light-gray hover:text-blue-third">About Us</a>
               </li>
               <li>
                 <button className="text-light-gray hover:text-blue-third">Testimonials</button>
