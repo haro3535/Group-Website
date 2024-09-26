@@ -6,11 +6,32 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.template.loader import render_to_string
 import json
+import sqlite3
 
 # Create your views here.
 @api_view(['GET'])
 def hello_world(request):
     return Response({'message': 'Hello, world!'})
+
+
+def add_to_db(subject, message, from_email, full_name, company_name):
+    try:
+        conn = sqlite3.connect("db.sqlite3")
+        cursor = conn.cursor()
+        query = """INSERT INTO ContactMessages (subject, message, from_email, full_name, company_name)
+                   VALUES (?, ?, ?, ?, ?);"""
+        cursor.execute(query, (subject, message, from_email, full_name, company_name))
+        conn.commit()
+    except sqlite3.Error as e:
+        print(f"Database error: {e}")
+        raise
+    finally:
+        conn.close()
+
+
+
+
+    
 
 
 @csrf_exempt
@@ -33,8 +54,10 @@ def send_contact_mail(request):
             'message': message
         })
 
+        add_to_db(subject,message,from_email,full_name,company_name)
+
         try:
-            
+
             email = EmailMessage(
                 subject,
                 html_content,
@@ -47,6 +70,4 @@ def send_contact_mail(request):
         except Exception as e:
             return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
     return JsonResponse({'status': 'invaild request'}, status=400)
-
-
 
