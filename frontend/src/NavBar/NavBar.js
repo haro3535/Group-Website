@@ -69,16 +69,21 @@ const NavBar = () => {
       <nav id='navbar' className="bg-white w-full h-auto fixed justify-evenly items-center border-b-[1px] border-gray-300 z-10">
         <div className='w-full flex justify-center items-center'>
           <div id='nav-element' className="h-[12vh] w-3/4 flex justify-between items-center transition-[height] duration-[0.4s] ease-in-out">
-            <a href='/' className="text-2xl font-bold font-inter text-[var(--blue-second)]">
+            <a href='/' className="text-2xl font-bold  text-[var(--blue-second)]">
               BOHESA
             </a>
             <div className="lg:flex hidden">
-              <ul className="flex space-x-5 cursor-pointer font-inter text-light-gray font-bold">
-                <li><button onClick={() => handleScrollToSection('services')} className={activeSection === 'services' ? ' font-bold text-blue-second' : ''}>Services</button></li>
-                <li><button onClick={() => handleScrollToSection('solutions')} className={activeSection === 'solutions' ? 'font-bold text-blue-second ' : ''}>Solutions</button></li>
-                <li><button onClick={() => handleScrollToSection('community')} className={activeSection === 'community' ? 'font-bold text-blue-second' : ''}>Community</button></li>
-                <li><button onClick={() => handleScrollToSection('about')} className={activeSection === 'about' ? 'font-bold text-blue-second' : ''}>About</button></li>
-                <li><button onClick={() => handleScrollToSection('contact')} className={activeSection === 'contact' ? 'font-bold text-blue-second' : ''}>Contact</button></li>
+              <ul className="flex space-x-5 cursor-pointer text-light-gray font-semibold text-lg">
+                {/* <li><button onClick={() => handleScrollToSection('services')} className={activeSection === 'services' ? 'font-quicksand-500 text-blue-second' : 'font-quicksand-500'}>Services</button></li>
+                <li><button onClick={() => handleScrollToSection('solutions')} className={activeSection === 'solutions' ? 'font-quicksand-500 text-blue-second ' : 'font-quicksand-500'}>Solutions</button></li>
+                <li><button onClick={() => handleScrollToSection('community')} className={activeSection === 'community' ? 'font-quicksand-500 text-blue-second' : 'font-quicksand-500'}>Community</button></li>
+                <li><button onClick={() => handleScrollToSection('about')} className={activeSection === 'about' ? 'font-quicksand-500 text-blue-second' : 'font-quicksand-500'}>About</button></li>
+                <li><button onClick={() => handleScrollToSection('contact')} className={activeSection === 'contact' ? 'font-quicksand-500 text-blue-second' : 'font-quicksand-500'}>Contact</button></li> */}
+                <li><a href='/services' className='hover:text-blue-second'>Services</a></li>
+                <li><a href='/solutions' className='hover:text-blue-second'>Solutions</a></li>
+                <li><a href='/community' className='hover:text-blue-second'>Community</a></li>
+                <li><a href='/about-bohesa' className='hover:text-blue-second'>About</a></li>
+                <li><a href='#contact' className='hover:text-blue-second'>Contact</a></li>
               </ul>
             </div>
             <div className='w-[95px] h-full'>

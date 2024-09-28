@@ -4,28 +4,6 @@ import React from 'react';
 import './style.css';
 
 const Footer = () => {
-  const handleScrollToSection = (sectionId) => {
-    const sectionElement = document.getElementById(sectionId);
-    if (sectionElement) {
-      // Scroll to the element first
-      sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      
-      // Adjust scroll position to center the element
-      window.setTimeout(() => {
-        const elementRect = sectionElement.getBoundingClientRect();
-        const elementTop = elementRect.top;
-        const elementHeight = elementRect.height;
-        const viewportHeight = window.innerHeight;
-
-        // Calculate the amount to scroll to center the element
-        const scrollOffset = elementTop - (viewportHeight / 2) + (elementHeight / 2);
-        window.scrollTo({
-          top: window.pageYOffset + scrollOffset,
-          behavior: 'smooth'
-        });
-      }, 0); // Delay to allow initial scroll
-    }
-  };
   
   
   return (
@@ -70,19 +48,19 @@ const Footer = () => {
             <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Useful Links</h2>
             <div className="list-none mb-10">
               <li>
-                <button onClick={() => handleScrollToSection('services')} className="text-light-gray hover:text-blue-third">Our services</button>
+                <a href='/?slideTo=services' className="text-light-gray hover:text-blue-third">Our services</a>
               </li>
               <li>
-                <button onClick={() => handleScrollToSection('solutions')} className="text-light-gray hover:text-blue-third">Business solutions</button>
+                <a href='/?slideTo=solutions' className="text-light-gray hover:text-blue-third">Business solutions</a>
               </li>
               <li>
-                <button onClick={() => handleScrollToSection('community')} className="text-light-gray hover:text-blue-third">Our Community</button>
+                <a href='/?slideTo=community' className="text-light-gray hover:text-blue-third">Our Community</a>
               </li>
               <li>
-                <button onClick={() => handleScrollToSection('about')} className="text-light-gray hover:text-blue-third">Who are we?</button>
+                <a href='/?slideTo=about' className="text-light-gray hover:text-blue-third">Who are we?</a>
               </li>
               <li>
-                <button onClick={() => handleScrollToSection('contact')} className="text-light-gray hover:text-blue-third">Contact Us</button>
+                <a href='/?slideTo=contact' className="text-light-gray hover:text-blue-third">Contact Us</a>
               </li>
               
             </div>

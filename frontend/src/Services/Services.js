@@ -49,11 +49,11 @@ const services = [
 ];
 export default function Services() {
   return (
-    <div id="services" className="flex justify-center items-center py-10 bg-white">
+    <div id="services" className="flex justify-center items-center py-10 ">
       <div className="w-3/4 flex flex-col items-center">
         {/* Header */}
         <div className="flex flex-col items-center mb-6">
-          <h2 className="text-xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Our Services</h2>
+          <h2 className="text-2xl font-semibold" style={{ color: 'var(--custom-gray)' }}>Our Services</h2>
           <h1 className="text-base font-normal inter-font" style={{ color: 'var(--light-gray)' }}>Tailored solutions to meet your specific needs.</h1>
         </div>
 

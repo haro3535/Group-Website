@@ -76,7 +76,7 @@ const Card = ({ title, content, icon }) => {
 };
 
 const CardsGrid = () => (
-  <div id="solutions" className="w-full flex flex-col items-center justify-center py-8 bg-white">
+  <div id="solutions" className="w-full flex flex-col items-center py-10 justify-center bg-white">
     <div className="w-3/4 flex flex-col items-center justify-center mb-6">
       <h2 className="text-xl text-center font-semibold inter-font mb-3 " style={{ color: 'var(--custom-gray)' }}>
         Empowering businesses through innovative technology
@@ -109,8 +109,8 @@ const CardsGrid = () => (
 
 export default function Cards() {
   return (
-    <div>
+    <section className='py-10'>
       <CardsGrid />
-    </div>
+    </section>
   );
 }

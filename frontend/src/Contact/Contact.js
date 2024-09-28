@@ -46,17 +46,17 @@ export default function Contact() {
     }
 
     return (
-        <section id="contact" className="w-full flex flex-col justify-center items-center pt-8">
+        <section id="contact" className="w-full flex flex-col justify-center items-center py-10">
             <div className="w-3/4 grid lg:grid-cols-2 grid-cols-1 space-y-2">
                 <div className="flex justify-center items-center overflow-hidden">
                     <img src='deneme2.jpg' className='w-3/4  -mb-10 md:bottom-0'  alt=''/>
                 </div>
                 
                 <div className="w-full lg:w-3/4 mx-auto lg:mx-0 bg-white py-4 px-4">
-                    <h2 className="text-2xl font-semibold inter-font" style={{ color: 'var(--custom-gray)' }}>Contact Us</h2>
+                    <h2 className="text-2xl font-semibold " style={{ color: 'var(--custom-gray)' }}>Contact Us</h2>
                     <form className="space-y-4 my-6" onSubmit={handleSubmit}>
                         <div className="space-y-2">
-                            <label className="block text-sm">Full Name</label>
+                            <label className="block text-sm text-light-gray">Full Name</label>
                             <input 
                                 type="text" 
                                 name="fullName" 
@@ -68,7 +68,7 @@ export default function Contact() {
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="block text-sm">Email</label>
+                            <label className="block text-sm text-light-gray">Email</label>
                             <input 
                                 type="email" 
                                 name="email" 
@@ -80,7 +80,7 @@ export default function Contact() {
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="block text-sm">Company Name (Optional)</label>
+                            <label className="block text-sm text-light-gray">Company Name (Optional)</label>
                             <input 
                                 type="text" 
                                 name="companyName" 
@@ -91,7 +91,7 @@ export default function Contact() {
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="block text-sm">Subject</label>
+                            <label className="block text-sm text-light-gray">Subject</label>
                             <input 
                                 type="text" 
                                 name="subject" 
@@ -102,10 +102,10 @@ export default function Contact() {
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="block text-sm">Message</label>
+                            <label className="block text-sm inter-font-400 text-light-gray">Message</label>
                             <textarea 
                                 name="message" 
-                                className="w-full py-2 px-3 border-2 rounded-md" 
+                                className="w-full py-2 px-3 border-2 rounded-md " 
                                 placeholder="Message..."
                                 value={formData.message}
                                 onChange={handleChange}
@@ -113,7 +113,7 @@ export default function Contact() {
                                 style={{resize: "none"}}
                             />
                         </div>
-                        <button type="submit" className="bg-blue-second py-2 px-3 rounded-md text-white hover:bg-opacity-85">Send message</button>
+                        <button type="submit" className="bg-blue-second py-2 px-3 rounded-md inter-font-500 text-white hover:bg-opacity-85">Send message</button>
                     </form>
                 </div>
             </div>

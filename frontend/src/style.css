@@ -14,9 +14,59 @@
   --blue-third-rgba: 58, 190, 249;
   --blue-fourth-rgba: 167, 230, 255;
 }
-.inter-font {
-  font-family: 'Inter', sans-serif;
+
+
+/*Basliklar keskin hatli yazilar yumusak hatli*/
+
+.text-400 {
+  font-family: 'Fredoka', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.text-500 {
+  font-family: 'Fredoka', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.text-600 {
+  font-family: 'Fredoka', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.text-700 {
+  font-family: 'Fredoka', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*
+.font-quicksand-400{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-quicksand-500{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-quicksand-600{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}*/
 
 @keyframes circle-border-animation {
   0% {
@@ -139,5 +189,9 @@
   border-radius: 10px 5px 10px 5px;
   margin-left: 25px
 }
+
+
+
+
 
 
