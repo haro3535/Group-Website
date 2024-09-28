@@ -96,6 +96,20 @@ const Footer = () => {
                 </svg>
                 <a href='/' className="text-light-gray hover:text-blue-third cursor-pointer">Instagram</a>
               </li>
+              <li className='flex space-x-3 items-center'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#717171" fill="none">
+                    <path d="M3 21L10.5484 13.4516M21 3L13.4516 10.5484M13.4516 10.5484L8 3H3L10.5484 13.4516M13.4516 10.5484L21 21H16L10.5484 13.4516" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <a href='/' className="text-light-gray hover:text-blue-third cursor-pointer">X</a>
+              </li>
+              <li className='flex space-x-3 items-center'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#717171" fill="none">
+                    <circle cx="6.5" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5" />
+                    <ellipse cx="15.5" cy="12" rx="2.5" ry="4.5" stroke="currentColor" stroke-width="1.5" />
+                    <ellipse cx="21" cy="12" rx="1" ry="4.5" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+                <a href='/' className="text-light-gray hover:text-blue-third cursor-pointer">Medium</a>
+              </li>
               {/* ... Other social media links ... */}
             </div>
           </div>
