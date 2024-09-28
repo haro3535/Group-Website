@@ -57,7 +57,7 @@ export default function Cookie() {
                     <br />
                     If you have any questions or concerns about this Cookie Policy, please contact us:
                     <br /><br />
-                    <h7 className="text-md text-custom-gray ">Bohesa Software Company</h7>
+                    <h4 className="text-md w-full text-end text-custom-gray ">Bohesa Software Company</h4>
                 </p>
             </div>
             <div></div>

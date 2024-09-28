@@ -2,6 +2,20 @@ import React from 'react';
 import './style.css';
 
 const Footer = () => {
+
+  function generateLink(target){
+    const isRoot = window.location.pathname === '/';
+
+    if(isRoot){
+      console.log("object");
+      return `?slideTo=${target}`; // TODO: Burada sorun var
+    }
+    else
+      return `/?slideTo=${target}`;
+  }
+  
+  
+  
   return (
     <footer id="contact" className="bg-bcg-light-gray body-font flex flex-col items-center">
       <div className="w-3/4 grid lg:grid-cols-4 grid-cols-1 py-10 space-y-5 lg:space-y-0">
@@ -44,19 +58,19 @@ const Footer = () => {
             <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Useful Links</h2>
             <div className="list-none mb-10">
               <li>
-                <a href='/?slideTo=services' className="text-light-gray hover:text-blue-third">Our services</a>
+                <a href={generateLink("services")} className="text-light-gray hover:text-blue-third">Our services</a>
               </li>
               <li>
-                <a href='/?slideTo=solutions' className="text-light-gray hover:text-blue-third">Business solutions</a>
+                <a href={generateLink("solutions")} className="text-light-gray hover:text-blue-third">Business solutions</a>
               </li>
               <li>
-                <a href='/?slideTo=community' className="text-light-gray hover:text-blue-third">Our Community</a>
+                <a href={generateLink("community")} className="text-light-gray hover:text-blue-third">Our Community</a>
               </li>
               <li>
-                <a href='/?slideTo=about' className="text-light-gray hover:text-blue-third">Who are we?</a>
+                <a href={generateLink("about")} className="text-light-gray hover:text-blue-third">Who are we?</a>
               </li>
               <li>
-                <a href='/?slideTo=contact' className="text-light-gray hover:text-blue-third">Contact Us</a>
+                <a href={generateLink("contact")} className="text-light-gray hover:text-blue-third">Contact Us</a>
               </li>
             </div>
           </div>

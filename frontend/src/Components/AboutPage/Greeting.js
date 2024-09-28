@@ -20,7 +20,7 @@ export default function Greeting(){
                 Duis tempor magna ex aliquip laborum ullamco ipsum do aliqua Lorem et incididunt. Mollit cillum nulla eiusmod laborum enim aliqua sunt incididunt nostrud. Cillum labore eu adipisicing sit quis velit mollit commodo reprehenderit. Nostrud consequat nisi pariatur ad ad laborum ex duis ex ut sint do. Sunt ex tempor sit sunt consequat incididunt ad officia Lorem pariatur mollit irure dolor.
 
                 Exercitation laborum nostrud fugiat et Lorem occaecat elit occaecat. Labore est ipsum amet culpa ex officia. Sunt do veniam adipisicing irure.</p>
-            </div>
+                </div>
             <div></div>
         </section>
     )

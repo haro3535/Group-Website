@@ -9,7 +9,7 @@ export default function About() {
                 {/* Text */}
                 <div className="xl:w-3/4 md:text-left flex justify-center items-center py-10">
                     <div className="xl:w-3/4 space-y-3 py-10 px-16 bg-blue-first rounded-3xl  bg-opacity-90 mx-auto lg:mx-0">
-                        <h2 className="text-2xl text-white font-semibold " >Who Are We?</h2>
+                        <h2 className="text-2xl text-white font-semibold" >Who Are We?</h2>
                         <p className="text-md text-white font-semibold inter-font-400">
                             We are a team of passionate developers dedicated to providing top-notch software solutions. We envision a world where every business can leverage technology to achieve their goals.
                         </p>
