@@ -3,16 +3,44 @@ import './style.css';
 
 const Footer = () => {
 
+  
+
+  const handleClick = (target) => {
+    generateLink(target);
+  }
+
   function generateLink(target){
     const isRoot = window.location.pathname === '/';
 
     if(isRoot){
-      console.log("object");
-      return `?slideTo=${target}`; // TODO: Burada sorun var
+      handleScrollToSection(target);
     }
     else
-      return `/?slideTo=${target}`;
+      window.location.href = `/?slideTo=${target}`  
   }
+
+  const handleScrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      // Scroll to the element first
+      sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+      // Adjust scroll position to center the element
+      window.setTimeout(() => {
+        const elementRect = sectionElement.getBoundingClientRect();
+        const elementTop = elementRect.top;
+        const elementHeight = elementRect.height;
+        const viewportHeight = window.innerHeight;
+
+        // Calculate the amount to scroll to center the element
+        const scrollOffset = elementTop - (viewportHeight / 2) + (elementHeight / 2);
+        window.scrollTo({
+          top: window.pageYOffset + scrollOffset,
+          behavior: 'smooth'
+        });
+      }, 0); // Delay to allow initial scroll
+    }
+  };
   
   
   
@@ -58,19 +86,19 @@ const Footer = () => {
             <h2 className="title-font font-bold text-light-gray tracking-widest text-lg mb-3">Useful Links</h2>
             <div className="list-none mb-10">
               <li>
-                <a href={generateLink("services")} className="text-light-gray hover:text-blue-third">Our services</a>
+                <button onClick={() => handleClick("services")} className="text-light-gray hover:text-blue-third">Our services</button>
               </li>
               <li>
-                <a href={generateLink("solutions")} className="text-light-gray hover:text-blue-third">Business solutions</a>
+                <button onClick={() => handleClick("solutions")} className="text-light-gray hover:text-blue-third">Business solutions</button>
               </li>
               <li>
-                <a href={generateLink("community")} className="text-light-gray hover:text-blue-third">Our Community</a>
+                <button onClick={() => handleClick("community")} className="text-light-gray hover:text-blue-third">Our Community</button>
               </li>
               <li>
-                <a href={generateLink("about")} className="text-light-gray hover:text-blue-third">Who are we?</a>
+                <button onClick={() => handleClick("about")} className="text-light-gray hover:text-blue-third">Who are we?</button>
               </li>
               <li>
-                <a href={generateLink("contact")} className="text-light-gray hover:text-blue-third">Contact Us</a>
+                <button onClick={() => handleClick("contact")} className="text-light-gray hover:text-blue-third">Contact Us</button>
               </li>
             </div>
           </div>
